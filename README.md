@@ -1,6 +1,6 @@
 # Min MVC-webbapplikation
 
-![Webbapplikation](webapp-screenshot.png)
+![Webbapplikation](./webapp.png)
 
 ## Beskrivning
 
