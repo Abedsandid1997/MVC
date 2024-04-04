@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class appTwig extends AbstractController
+class AppTwig extends AbstractController
 {
     #[Route("/lucky", name: "lucky_number")]
     public function number(): Response
@@ -53,7 +53,7 @@ class appTwig extends AbstractController
         return $this->render('api.html.twig', $data);
     }
 
-    #[Route("/api/quote",name: "/api/quote")]
+    #[Route("/api/quote", name: "/api/quote")]
     public function jsonNumber(): Response
     {
         $number = random_int(0, 2);
