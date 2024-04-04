@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Me{% endblock %}
+
+{% block body %}
+<div class="me">
+     <h1>JSON routs</h1>
+      <ul>
+        {% for route in json_routes %}
+            <li><a href="{{ path(route) }}">{{ route }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
