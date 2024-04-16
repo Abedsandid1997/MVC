@@ -1,0 +1,33 @@
+{% extends "base2.html.twig" %}
+
+{% block title %}laddningssida{% endblock %}
+{% block body %}
+
+<h1>De tre huvudklasserna i ditt kortspel är relaterade på följande sätt:</h1>
+
+<p>
+<strong>Cards:</strong> Denna klass representerar ett enskilt kort och innehåller egenskaper för dess värde och svit.
+Både GraficCard och UnicodeCards är underklasser av Cards och är båda specialiserade versioner av kortet.
+De är relaterade till Cards genom arv och delar många av dess egenskaper och metoder.
+</p>
+<p><strong>DeckOfCards:</strong> Denna klass representerar en kortlek och hanterar operationer som att skapa kortleken,
+blanda korten, dra kort från kortleken och räkna antalet kort som återstår.
+DeckOfCards innehåller en array av Cards-objekt,
+vilket betyder att varje objekt i arrayen är en instans av Cards (antingen GraficCard eller UnicodeCards).
+Detta innebär att DeckOfCards är beroende av Cards-klassen för att fungera korrekt.
+</p>
+
+<p>
+<strong>GraficCard och UnicodeCards:</strong>
+Dessa klasser är specialiserade versioner av Cards och representerar olika sätt att visa korten.
+De är relaterade till Cards genom arv och återanvänder dess 
+egenskaper och metoder samtidigt som de tillför sina egna unika egenskaper för att representera korten på olika sätt 
+(antingen med bildfiler eller Unicode-tecken).
+</p>
+<p>
+<strong>Sammanfattningsvis</strong> är Cards-klassen den övergripande abstraktionen av ett kort,
+medan DeckOfCards-klassen hanterar hela kortleken och dess operationer.
+GraficCard och UnicodeCards utvidgar Cards-klassen för att representera olika sätt att visa korten.
+</p>
+<img width="500px" src="{{ asset('img/uml-diagram.png') }}" alt="">
+{% endblock %}

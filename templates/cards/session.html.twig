@@ -1,0 +1,28 @@
+{% extends "base2.html.twig" %}
+
+{% block title %}session{% endblock %}
+
+{% block body %}
+{{ include('flash.html.twig') }}
+
+ <h1>Session Contents</h1>
+    <ul>
+        {% for key, value in sessionData %}
+            <li>{{ key }}:
+                {% if value is iterable %}
+                    <ul>
+                        {% for subkey, subvalue in value %}
+                            <li>{{ subkey }}: {{ subvalue }}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    {{ dump(value) }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    <form action="{{ path('session_delete') }}" method="post">
+        <input type="submit" value="Delete session" >
+    </form>
+
+{% endblock %}

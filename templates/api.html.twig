@@ -1,8 +1,9 @@
 {% extends "base.html.twig" %}
 
-{% block title %}Me{% endblock %}
+{% block title %}Api{% endblock %}
 
 {% block body %}
+
 <div class="me">
      <h1>JSON routs</h1>
       <ul>
@@ -10,5 +11,35 @@
             <li><a href="{{ path(route) }}">{{ route }}</a></li>
         {% endfor %}
     </ul>
+        
+     <h1>Post routs</h1>
+
+<form id="drawForm" method="post" action="">
+<p>
+    <input type="submit" name="restart" value="shuffle card"
+    onClick="this.form.action='{{ path('/api/deck/shuffle') }}';this.form.method='post';"
+>
+     
+</p>
+        <p>
+            <input type="submit" name="restart" value="draw 1 card"
+    onClick="this.form.action='{{ path('/api/deck/draw') }}';this.form.method='post';"
+>
+     
+        </p>
+        <p>
+           <label for="inputNum">How many cards do you want to draw?</label>
+            <input id="inputNum" type="number" name="number" min="1" max="52" value="1">
+        </p>
+        <input type="submit" name="draw" value="Draw" onclick="updateAction()">
+    </form>
+
 </div>
+<script>
+        function updateAction() {
+            var numValue = document.getElementById('inputNum').value;
+            var form = document.getElementById('drawForm');
+            form.action = "{{ path('api/deck/draw/{number}', {'number': '__VALUE__'}) }}".replace('__VALUE__', numValue);
+        }
+    </script>
 {% endblock %}

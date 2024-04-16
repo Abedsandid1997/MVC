@@ -1,0 +1,21 @@
+{% extends "base2.html.twig" %}
+
+{% block title %}draw 1 card{% endblock %}
+
+{% block body %}
+<h2>kort antal : {{antal}}</h2>
+<ul>
+    {% if card.getCard() is not null and 'img' in card.getCard() %}
+
+        <li class="card">
+            <img width= "50px"src="{{ asset(card.getCard()) }}" alt="Card Image">
+        </li>
+    {% else %}
+        <li class="card">{{ card.getCard() }}</li>
+    {% endif %}
+
+</ul>
+
+
+<a href='{{ path('deck-draw') }}' class="button">draw again</a>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "base2.html.twig" %}
+
+{% block title %}draw many cards{% endblock %}
+
+{% block body %}
+{{ include('flash.html.twig') }}
+
+<h1>draw cards</h1>
+<h2>kort som är kvar : {{antalkort}}</h2>
+
+
+<form method="post" action="{{ path('card_numbers') }}">
+    <label for="fname">How many cards do you want to draw?</label>
+
+    <input type="number" name="num_cards" min="1" max="52" value="1">
+    <input class="button" type="submit" name="do_it" value="draw cards">
+    
+</form>
+
+
+{% if cards is defined %}
+
+<ul class="deck">
+        {% for card in cards %}
+    {% if card.getCard() is not null and 'img' in card.getCard() %}
+
+        <li class="card">
+            <img width= "50px"src="{{ asset(card.getCard()) }}" alt="Card Image">
+        </li>
+    {% else %}
+        <li class="card">{{ card.getCard() }}</li>
+    {% endif %}
+{% endfor %}
+    {% endif %}
+
+</ul>
+{% endblock %}

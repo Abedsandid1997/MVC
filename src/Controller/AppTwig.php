@@ -20,7 +20,7 @@ class AppTwig extends AbstractController
 
         return $this->render('lucky_number.html.twig', $data);
     }
-    
+
     #[Route("/", name: "me")]
     public function me(): Response
     {
@@ -43,9 +43,10 @@ class AppTwig extends AbstractController
     {
 
         $json_routes = [
-            "/api/quote"
+            "/api/quote",
+            "/api/deck"
         ];
-        
+
         $data = [
             'json_routes' => $json_routes
         ];
@@ -83,6 +84,9 @@ class AppTwig extends AbstractController
         );
         return $response;
     }
+
+
+
 
     #[Route("/report/kmom01", name: "kmom01")]
     public function kmom01(): Response

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+        {% endblock %}
+    </head>
+    <body>
+        <header class="site-header" style="background-image: url({{ asset('img/background.jpg') }})">
+        <span class="site-title">My Symfony Site</span>
+        <nav class='nav'>
+        <ul>
+            <li><a href="{{ path('card') }}">card</a></li>
+            <li><a href="{{ path('card-deck') }}">cards</a></li>
+            <li><a href="{{ path('deck-shuffle') }}">shuffles</a></li>
+            <li><a href="{{ path('deck-draw') }}">draw</a></li>
+            <li><a href="{{ path('draw_cards_get') }}">draw many cards</a></li>
+
+        </ul>
+    </nav>
+    </header>
+    <main class="main">
+            {% block body %}{% endblock %}
+    </main>
+     <footer class="footer" style="background-image: url({{ asset('img/background.jpg') }})">
+        <div class="row">
+        <div class="col3 box">
+        <h4>Validering </h4>
+            <p> 
+              <a href="http://validator.w3.org/check/referer">HTML</a>
+              <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+              <a href="https://validator.w3.org/checklink">Link checker</a>
+            </p>
+        </div>
+
+        <div class="col3 box">
+            <h4>Github</h4>         
+            <ul>
+            <li> <a href="https://github.com/dbwebb-se/mvc">Kursens github</a></li>
+            <li> <a href="https://github.com/Abedsandid1997">Mitt github</a></li>
+             </ul>
+        </div>
+
+        <div class="col3 box">
+            <h4> kontakt </h4>
+            <p>Abedsandeed2@gmail.com</p>
+        </div>
+       
+    </div>
+
+    <div class="row">
+        <div class="col1 final">
+          <p>Denna sidan är Copyright &copy; av mig.</p>
+        </div>
+    </div>
+</footer>
+    </footer>
+
+    </body>
+    
+</html>

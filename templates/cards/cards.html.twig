@@ -1,0 +1,23 @@
+{% extends "base2.html.twig" %}
+
+{% block title %}Kortlek{% endblock %}
+
+{% block body %}
+<h1> Cards </h1>
+<ul class="deck">
+        {% for card in cards %}
+    {% if card.getCard() is not null and 'img' in card.getCard() %}
+
+        <li class="card">
+            <img width= "50px"src="{{ asset(card.getCard()) }}" alt="Card Image">
+        </li>
+    {% else %}
+        <li class="card">{{ card.getCard() }}</li>
+    {% endif %}
+{% endfor %}
+
+</ul>
+
+
+
+{% endblock %}
