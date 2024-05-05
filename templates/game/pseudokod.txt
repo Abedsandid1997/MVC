@@ -1,0 +1,48 @@
+// Klass för hantering av spelet
+Klass Spel:
+    - Privata variabler: spelare, bank
+
+    - Konstruktor():
+        - Skapa en ny spelare och en ny bank
+
+    - Funktion hämtaSpelare():
+        - Returnera spelaren
+
+    - Funktion hämtaBank():
+        - Returnera banken
+
+    - Funktion bestämVinnare():
+        - Beräkna poäng för spelare och bank
+        - Jämför poängen för att bestämma vinnaren
+
+// Klass för banken
+Klass Bank:
+    - Privat variabel: hand
+
+    - Konstruktor():
+        - Skapa en tom hand
+
+    - Funktion läggTillKort(kort):
+        - Lägg till ett kort i bankens hand
+
+    - Funktion beräknaPoäng():
+        - Beräkna poängen för banken baserat på handen
+
+    - Funktion fortsättDragaKort():
+        - Avgör om banken ska dra fler kort baserat på dess poäng
+
+// Klass för spelaren
+Klass Spelare:
+    - Privat variabel: hand
+
+    - Konstruktor():
+        - Skapa en tom hand
+
+    - Funktion läggTillKort(lek):
+        - Dra ett kort från leken och lägg till det i handen
+
+    - Funktion beräknaPoäng():
+        - Beräkna poängen för spelaren baserat på handen
+
+    - Funktion ärBust():
+        - Kontrollera om spelaren är över 21 poäng

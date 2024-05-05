@@ -4,8 +4,8 @@ namespace App\Cards;
 
 class GraficCard extends Cards
 {
-    protected $imagePath;
-    public function __construct($suit, $value)
+    protected string $imagePath;
+    public function __construct(string $suit, string $value)
     {
         parent::__construct($suit, $value);
         $this->imagePath = 'img/' . $this->value . $this->suit . '.png';

@@ -22,7 +22,7 @@ class AppTwig extends AbstractController
     }
 
     #[Route("/", name: "me")]
-    public function me(): Response
+    public function myPage(): Response
     {
         return $this->render('me.html.twig');
     }
@@ -42,13 +42,14 @@ class AppTwig extends AbstractController
     public function routs(): Response
     {
 
-        $json_routes = [
+        $jsonRoutes = [
             "/api/quote",
-            "/api/deck"
+            "/api/deck",
+            "/api/game"
         ];
 
         $data = [
-            'json_routes' => $json_routes
+            'json_routes' => $jsonRoutes
         ];
 
         return $this->render('api.html.twig', $data);
@@ -57,7 +58,6 @@ class AppTwig extends AbstractController
     #[Route("/api/quote", name: "/api/quote")]
     public function jsonNumber(): Response
     {
-        $number = random_int(0, 2);
 
         $citat = [
             "Lycka är att göra det du älskar och älska det du gör.",
@@ -85,43 +85,5 @@ class AppTwig extends AbstractController
         return $response;
     }
 
-
-
-
-    #[Route("/report/kmom01", name: "kmom01")]
-    public function kmom01(): Response
-    {
-        return $this->render('kmom01.html.twig');
-    }
-
-    #[Route("/report/kmom02", name: "kmom02")]
-    public function kmom02(): Response
-    {
-        return $this->render('kmom02.html.twig');
-    }
-
-    #[Route("/report/kmom03", name: "kmom03")]
-    public function kmom03(): Response
-    {
-        return $this->render('kmom03.html.twig');
-    }
-
-    #[Route("/report/kmom04", name: "kmom04")]
-    public function kmom04(): Response
-    {
-        return $this->render('kmom04.html.twig');
-    }
-
-    #[Route("/report/kmom05", name: "kmom05")]
-    public function kmom05(): Response
-    {
-        return $this->render('kmom05.html.twig');
-    }
-
-    #[Route("/report/kmom06", name: "kmom06")]
-    public function kmom06(): Response
-    {
-        return $this->render('kmom06.html.twig');
-    }
 
 }

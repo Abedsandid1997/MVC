@@ -6,10 +6,10 @@
 }
 
 body {
-    background-color: skyblue;
+    background-color: #202324;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 header{
@@ -73,7 +73,6 @@ nav a:hover {
 }
 
 .main{
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -143,9 +142,9 @@ h1{
     padding: 0 1em;
 }
 
-html {
+/* html {
     background-color: #7d56d6;
-}
+} */
 .redovisning{
     width:90%;
 }
@@ -184,7 +183,7 @@ html {
     color: #fff;
     text-decoration: none;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
     font-size: 16px;
     height: 3rem;
@@ -195,20 +194,24 @@ html {
   }
 
   .flash-notice {
-    padding: 0.5em;
+    padding: 3.5em;
+
     color: #004085;
     background-color: #83f2a9;
     border-color: #b8daff;
+    margin: auto;
+
 }
 .flash-notice:before {
     content: "ⓘ";
 }
 
 .flash-warning {
-    padding: 0.5em;
+    padding: 3.5em;
     color: #fbf9f4;
     background-color: rgb(74, 5, 5);
     border-color: #ffeeba;
+    margin: auto;
 }
 .flash-warning:before {
     content: "⚠";
@@ -237,4 +240,36 @@ input[type=number], select {
   
   input[type=submit]:hover {
     background-color: #45a049;
+  }
+
+  .table{
+    display: flex;
+    gap:5px;
+
+  }
+
+  .me_table{
+    display: flex;
+    gap:5px;
+    margin-top: auto;
+}
+.game{
+    background-color: darkgreen;
+    width: 60%;
+    min-height: 600px;
+    gap: 10px;
+    margin: auto;
+    border-radius: 100px;
+    border: 2px solid red;
+    padding: 1rem;
+}
+.button-yellow{
+    background-color: #ffcc00;
+    font-size: 1.5rem;
+    color: brown;
+    padding: 10px 30px;
+}
+
+.button-yellow:hover {
+    background-color: #8d7102;
   }

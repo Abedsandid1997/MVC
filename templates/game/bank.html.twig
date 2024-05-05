@@ -1,0 +1,41 @@
+{% extends "base3.html.twig" %}
+
+{% block title %}draw 1 card{% endblock %}
+
+{% block body %}
+<h2>kort antal : {{antal}}</h2>
+<div class= "table">
+
+    {% for card in bank %}
+
+        <div class="card">
+            <img width= "70px"src="{{ asset(card.getCard()) }}" alt="Card Image">
+        </div>
+    
+{% endfor %}
+   
+
+</div>
+
+<h2>bank points is: {{BankCards}}</h2>
+
+{{ include('flash.html.twig') }}
+
+
+<div class= "me_table">
+
+    {% for card in cards %}
+
+        <div class="card">
+            <img width= "70px"src="{{ asset(card.getCard()) }}" alt="Card Image">
+        </div>
+    
+{% endfor %}
+   
+
+</div>
+<h2>your points is: {{value}}</h2>
+<a href='{{ path('new_game') }}' class="button button-yellow">start new game</a>
+
+{% endblock %}
+

@@ -2,11 +2,14 @@
 
 namespace App\Cards;
 
-use App\Cards\UnicodeCards;
+use App\Cards\GraficCard;
 
 class DeckOfCards
 {
-    private $cards;
+    /**
+     * @var GraficCard[] Array of GraficCard objects
+    */
+    private array $cards;
 
     public function __construct()
     {
@@ -17,27 +20,33 @@ class DeckOfCards
 
         foreach ($suits as $suit) {
             foreach ($values as $value) {
-                $index = array_search($value, $values);
-                if ($index % 2 === 1) {
-                    $this->cards[] = new UnicodeCards($suit, $value);
-                } else {
-                    $this->cards[] = new GraficCard($suit, $value);
+                // $index = array_search($value, $values);
+                $this->cards[] = new GraficCard($suit, $value);
 
-                }
+                // if ($index % 2 === 1) {
+                //     $this->cards[] = new GraficCard($suit, $value);
+                // } else {
+                //     $this->cards[] = new GraficCard($suit, $value);
+
+                // }
             }
         }
     }
-
-    public function getCards()
+    /**
+     * Get the cards in the deck.
+     *
+     * @return GraficCard[] Array of GraficCard objects
+    */
+    public function getCards(): array
     {
         return $this->cards ;
     }
 
-    public function shuffle()
+    public function shuffle(): void
     {
         shuffle($this->cards);
     }
-    public function dra()
+    public function dra(): ?GraficCard
     {
         // $antalKort = count($this->cards);
         $index = array_rand($this->cards);
@@ -46,12 +55,18 @@ class DeckOfCards
         return $mycard;
     }
 
-    public function count()
+    public function count(): int
     {
         return(count($this->cards));
     }
 
-    public function draKort($number)
+    /**
+     * Draw a specified number of cards from the deck.
+     *
+     * @param int $number The number of cards to draw
+     * @return GraficCard[] Array of GraficCard objects representing the drawn cards
+     */
+    public function draKort(int $number): array
     {
         $mycards = [];
         for ($i = 1; $i <= $number; $i++) {
