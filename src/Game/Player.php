@@ -5,7 +5,7 @@ namespace App\Game;
 use App\Cards\GraficCard;
 use App\Cards\DeckOfCards;
 
-class Bank
+class Player
 {
     /**
      * @var GraficCard[] Array of GraficCard objects
@@ -27,8 +27,11 @@ class Bank
         return $this->hand;
     }
 
-    public function addCard(GraficCard $card): void
+    public function addCard(DeckOfCards $deck): void
     {
+        $numberOfCard = 1;
+        $draw = $deck->draKort($numberOfCard);
+        $card = $draw[0];
         $this->hand[] = $card;
     }
 
@@ -73,22 +76,16 @@ class Bank
 
         return $score;
     }
-
-    public function logic(DeckOfCards $deck): void
+    public function logic(): bool
     {
         $score = $this->getScore(); // Spara bankens poäng i en variabel
 
         // Upprepa tills bankens poäng är 17 eller mer
-        while ($score < 17) {
-            $numberOfCards = 1;
-            $draw = $deck->draKort($numberOfCards);
-            $card = $draw[0];
-            $this->addCard($card);
-            $score = $this->getScore(); // Uppdatera bankens poäng för nästa iteration
+        if ($score > 21) {
+            return true;
         }
-
+        return false;
     }
-
 
 
 }
