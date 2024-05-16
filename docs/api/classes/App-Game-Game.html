@@ -126,11 +126,14 @@
         <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Game.php"><a href="files/src-game-game.html"><abbr title="src/Game/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8</span>
+    <span class="phpdocumentor-element-found-in__line">14</span>
 
     </aside>
 
-        
+            <p class="phpdocumentor-summary">Class Game</p>
+
+    <section class="phpdocumentor-description"><p>Represents a game of blackjack involving a player and the bank.</p>
+</section>
 
 
 
@@ -161,12 +164,14 @@
     <span>
                         &nbsp;: <a href="classes/App-Game-Bank.html"><abbr title="\App\Game\Bank">Bank</abbr></a>            </span>
 </dt>
+<dd>The bank participating in the game.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -property -private">
     <a href="classes/App-Game-Game.html#property_player">$player</a>
     <span>
                         &nbsp;: <a href="classes/App-Game-Player.html"><abbr title="\App\Game\Player">Player</abbr></a>            </span>
 </dt>
+<dd>The player participating in the game.</dd>
 
     </dl>
 
@@ -181,24 +186,28 @@
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
+<dd>Constructs a new Game instance with a player and a bank.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Game-Game.html#method_getBank">getBank()</a>
     <span>
-                                &nbsp;: object    </span>
+                                &nbsp;: <a href="classes/App-Game-Bank.html"><abbr title="\App\Game\Bank">Bank</abbr></a>    </span>
 </dt>
+<dd>Retrieves the bank object participating in the game.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/App-Game-Game.html#method_getPlayer">getPlayer()</a>
     <span>
-                                &nbsp;: object    </span>
+                                &nbsp;: <a href="classes/App-Game-Player.html"><abbr title="\App\Game\Player">Player</abbr></a>    </span>
 </dt>
+<dd>Retrieves the player object participating in the game.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Game-Game.html#method_getWinner">getWinner()</a>
+    <a href="classes/App-Game-Game.html#method_isWinner">isWinner()</a>
     <span>
                                 &nbsp;: bool    </span>
 </dt>
+<dd>Determines the winner of the game based on player and bank scores.</dd>
 
     </dl>
 
@@ -231,11 +240,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Game.php"><a href="files/src-game-game.html"><abbr title="src/Game/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">17</span>
+    <span class="phpdocumentor-element-found-in__line">25</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">The bank participating in the game.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type"><a href="classes/App-Game-Bank.html"><abbr title="\App\Game\Bank">Bank</abbr></a></span>
@@ -266,11 +276,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Game.php"><a href="files/src-game-game.html"><abbr title="src/Game/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">13</span>
+    <span class="phpdocumentor-element-found-in__line">20</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">The player participating in the game.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">private</span>
         <span class="phpdocumentor-signature__type"><a href="classes/App-Game-Player.html"><abbr title="\App\Game\Player">Player</abbr></a></span>
@@ -306,11 +317,12 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Game.php"><a href="files/src-game-game.html"><abbr title="src/Game/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">19</span>
+    <span class="phpdocumentor-element-found-in__line">31</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Constructs a new Game instance with a player and a bank.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
                     <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
@@ -337,14 +349,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Game.php"><a href="files/src-game-game.html"><abbr title="src/Game/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">30</span>
+    <span class="phpdocumentor-element-found-in__line">51</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Retrieves the bank object participating in the game.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getBank</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">object</span></code>
+                    <span class="phpdocumentor-signature__name">getBank</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/App-Game-Bank.html"><abbr title="\App\Game\Bank">Bank</abbr></a></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -354,7 +367,11 @@
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">object</span>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/App-Game-Bank.html"><abbr title="\App\Game\Bank">Bank</abbr></a></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The bank participating in the game.</p>
+</section>
+
             </section>
 
 </article>
@@ -372,14 +389,15 @@
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Game.php"><a href="files/src-game-game.html"><abbr title="src/Game/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">25</span>
+    <span class="phpdocumentor-element-found-in__line">41</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Retrieves the player object participating in the game.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getPlayer</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">object</span></code>
+                    <span class="phpdocumentor-signature__name">getPlayer</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type"><a href="classes/App-Game-Player.html"><abbr title="\App\Game\Player">Player</abbr></a></span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -389,7 +407,11 @@
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">object</span>
+        <span class="phpdocumentor-signature__response_type"><a href="classes/App-Game-Player.html"><abbr title="\App\Game\Player">Player</abbr></a></span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>The player participating in the game.</p>
+</section>
+
             </section>
 
 </article>
@@ -399,32 +421,41 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getWinner">
-        getWinner()
-        <a href="classes/App-Game-Game.html#method_getWinner" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_isWinner">
+        isWinner()
+        <a href="classes/App-Game-Game.html#method_isWinner" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Game.php"><a href="files/src-game-game.html"><abbr title="src/Game/Game.php">Game.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">35</span>
+    <span class="phpdocumentor-element-found-in__line">65</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Determines the winner of the game based on player and bank scores.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getWinner</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+                    <span class="phpdocumentor-signature__name">isWinner</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
-    
+        <section class="phpdocumentor-description"><p>The player wins if the bank exceeds the maximum points, or if the player's
+points are higher than the bank's points without exceeding the maximum points.
+In all other cases, the bank wins or the game is a draw.</p>
+</section>
+
     
     
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
         <span class="phpdocumentor-signature__response_type">bool</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>True if the player wins, false otherwise.</p>
+</section>
+
             </section>
 
 </article>
@@ -552,7 +583,7 @@
                                             <li><a href="classes/App-Game-Game.html#method___construct">__construct()</a></li>
                                             <li><a href="classes/App-Game-Game.html#method_getBank">getBank()</a></li>
                                             <li><a href="classes/App-Game-Game.html#method_getPlayer">getPlayer()</a></li>
-                                            <li><a href="classes/App-Game-Game.html#method_getWinner">getWinner()</a></li>
+                                            <li><a href="classes/App-Game-Game.html#method_isWinner">isWinner()</a></li>
                                     </ul>
             </li>
                     </ul>
