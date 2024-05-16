@@ -17,16 +17,16 @@ class GameTest extends TestCase
      * properties, use no arguments.
      */
 
-        
-    
+
+
     public function testCreateGame(): void
     {
         $game = new Game();
         $this->assertInstanceOf("\App\Game\Game", $game);
-        
+
         $player = $game->getPlayer();
         $this->assertInstanceOf("\App\Game\Player", $player);
-        
+
         $bank = $game->getBank();
         $this->assertInstanceOf("\App\Game\Bank", $bank);
 
@@ -36,8 +36,8 @@ class GameTest extends TestCase
 
     public function testPlayerWinGame(): void
     {
-        
-        
+
+
         $fakeCard = new GraficCard('hearts', '10');
         $deckStub = $this->createMock(DeckOfCards::class);
         $deckStub->method('draKort')->willReturn([$fakeCard]);
@@ -62,7 +62,7 @@ class GameTest extends TestCase
 
     public function testBankWinGame(): void
     {
-        
+
         $fakeCard = new GraficCard('hearts', '10');
 
 
@@ -89,7 +89,7 @@ class GameTest extends TestCase
 
     public function testBankLoseGame(): void
     {
-        
+
         $fakeCard = new GraficCard('hearts', '10');
 
 
@@ -113,8 +113,8 @@ class GameTest extends TestCase
     }
 
     public function testDrawGame(): void
-    {   
-        
+    {
+
         $fakeCard = new GraficCard('hearts', '10');
         $deckStub = $this->createMock(DeckOfCards::class);
         $deckStub->method('draKort')->willReturn([$fakeCard]);
