@@ -46,14 +46,14 @@ class DeckOfCards
     {
         shuffle($this->cards);
     }
-    public function dra(): ?GraficCard
-    {
-        // $antalKort = count($this->cards);
-        $index = array_rand($this->cards);
-        $mycard = $this->cards[$index];
-        unset($this->cards[$index]);
-        return $mycard;
-    }
+    // public function dra(): ?GraficCard
+    // {
+    //     // $antalKort = count($this->cards);
+    //     $index = array_rand($this->cards);
+    //     $mycard = $this->cards[$index];
+    //     unset($this->cards[$index]);
+    //     return $mycard;
+    // }
 
     public function count(): int
     {

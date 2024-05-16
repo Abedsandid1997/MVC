@@ -2,8 +2,8 @@
 
 namespace App\Game;
 
-use App\Cards\GraficCard;
-use App\Cards\DeckOfCards;
+use App\Game\GraficCard;
+use App\Game\DeckOfCards;
 
 class Bank
 {

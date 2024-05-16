@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Cards\DeckOfCards;
+use App\Game\DeckOfCards;
 use App\Game\Player;
 use App\Game\Bank;
 use App\Game\Game;
@@ -66,7 +66,7 @@ class KortSpel extends AbstractController
         $bankCard = $bank->getHand();
         $bankCards = $bank->getScore();
         $antalKort = $deck->count();
-        $winner = $game->getWinner();
+        $winner = $game->isWinner();
         if ($winner) {
             $this->addFlash(
                 'notice',
