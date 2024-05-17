@@ -1,0 +1,28 @@
+{% extends 'base4.html.twig' %}
+
+{% block title %}Library!{% endblock %}
+
+{% block body %}
+
+
+<div class="me">
+     <div class="form">
+  <form method="post" action="">
+
+    <label for="booktitle">Book title</label>
+    <input type="text" id="title" name="title" placeholder="Title...">
+
+    <label for="author">Author</label>
+    <input type="text" id="author" name="author" placeholder="Author...">
+
+    <label for="isbn">Isbn</label>
+    <input type="text" id="isbn" name="isbn" placeholder="Isbn...">
+    
+    <label for="image">Image url</label>
+    <input type="text" id="image" name="image" placeholder="Image url...">
+  
+    <input type="submit" value="Add Book">
+  </form>
+</div>
+</div>
+{% endblock %}

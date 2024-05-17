@@ -1,0 +1,30 @@
+{% extends 'base4.html.twig' %}
+
+{% block title %}Library!{% endblock %}
+
+{% block body %}
+
+
+<div class="me">
+     <div class="form">
+  <form method="post" action="">
+
+    <label for="bookid">Book id</label>
+    <input type="text" id="id" name="id"  value="{{book.getId}}" readonly>
+
+    <label for="booktitle">Book title</label>
+    <input type="text" id="title" name="title"  value="{{book.getTitle}}">
+    <label for="author">Author</label>
+    <input type="text" id="author" name="author"  value="{{book.getAuthor}}">
+
+    <label for="isbn">Isbn</label>
+    <input type="text" id="isbn" name="isbn" value="{{book.getIsbn}}">
+    
+    <label for="image">Image url</label>
+    <input type="text" id="image" name="image"  value={{book.getImageUrl}}>
+  
+    <input type="submit" value="Edit">
+  </form>
+</div>
+</div>
+{% endblock %}

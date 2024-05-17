@@ -1,0 +1,44 @@
+{% extends 'base4.html.twig' %}
+
+{% block title %}Books{% endblock %}
+
+{% block body %}
+
+
+<div class="me">
+     
+<h1>Books</h1>
+
+<table id="book">
+  <tr>
+    <th>Book Id</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Isbn</th>
+    <th>Image</th>
+  </tr>
+
+        <tr>
+        
+            <td>{{book.getID}} </td>
+            <td>{{ book.getTitle }}</td>
+            <td>{{ book.getAuthor }}</td>
+            <td>{{ book.getIsbn }}</td>
+            {%if book.getImageUrl != null %}
+            <td><img class="myimg" width="100" src="{{ book.getImageUrl }}" alt=""> </td>
+            {%else%}
+            <td>There is no image for this book</td>
+            {%endif%}
+        </tr>
+    </table>
+    <a href="{{ path('book_delete_by_id', {id: book.getID}) }}">
+    <input type="submit" value="Delete"></input>
+    </a>
+
+    <a href="{{ path('book_edit_by_id', {id: book.getID}) }}">
+    <input type="submit" value="Edit"></input>
+    </a>
+</div>
+
+
+{% endblock %}

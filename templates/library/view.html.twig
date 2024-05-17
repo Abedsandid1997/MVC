@@ -1,0 +1,36 @@
+{% extends 'base4.html.twig' %}
+
+{% block title %}Books{% endblock %}
+
+{% block body %}
+
+
+<div class="me">
+     
+<h1>Books</h1>
+
+<table id="book">
+  <tr>
+    <th>Book Id</th>
+    <th>Title</th>
+    <th>Image</th>
+    <th>Book details</th>
+  </tr>
+
+    {% for book in books %}
+        <tr>
+        
+            <td><a href="{{ path('book_by_id', {id: book.getID}) }}"> {{book.getID}} </a></td>
+            <td>{{ book.getTitle }}</td>
+            
+            {%if book.getImageUrl != null %}
+            <td> <a href="{{ path('book_by_id', {id: book.getID}) }}"> <img class="myimg" width="100" src="{{ book.getImageUrl }}" alt=""> </a> </td>
+            {%else%}
+            <td>There is no image for this book</td>
+            {%endif%}
+            <td><a href="{{ path('book_by_id', {id: book.getID}) }}"> Click here for more details </a></td>
+        </tr>
+    {% endfor %}
+    </table>
+</div>
+{% endblock %}
