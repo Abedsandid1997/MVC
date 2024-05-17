@@ -170,26 +170,7 @@ class ProductController extends AbstractController
 
 
     }
-    #[Route('/book/update/{id}/{title}', name: 'book_update')]
-    public function updateBook(
-        ManagerRegistry $doctrine,
-        int $id,
-        string $title
-    ): Response {
-        $entityManager = $doctrine->getManager();
-        $book = $entityManager->getRepository(Books::class)->find($id);
-
-        if (!$book) {
-            throw $this->createNotFoundException(
-                'No book found for id '.$id
-            );
-        }
-
-        $book->setTitle($title);
-        $entityManager->flush();
-
-        return $this->redirectToRoute('books_show_all');
-    }
+    
 
     #[Route('/books/view', name: 'books_view_all')]
     public function viewAllBooks(
