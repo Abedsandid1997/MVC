@@ -20,15 +20,15 @@
     {% for book in books %}
         <tr>
         
-            <td><a href="{{ path('book_by_id', {id: book.getID}) }}"> {{book.getID}} </a></td>
+            <td><a href="{{ path('book_by_id', {bookId: book.getID}) }}"> {{book.getID}} </a></td>
             <td>{{ book.getTitle }}</td>
             
             {%if book.getImageUrl != null %}
-            <td> <a href="{{ path('book_by_id', {id: book.getID}) }}"> <img class="myimg" width="100" src="{{ book.getImageUrl }}" alt=""> </a> </td>
+            <td> <a href="{{ path('book_by_id', {bookId: book.getID}) }}"> <img class="myimg" width="100" src="{{ book.getImageUrl }}" alt=""> </a> </td>
             {%else%}
             <td>There is no image for this book</td>
             {%endif%}
-            <td><a href="{{ path('book_by_id', {id: book.getID}) }}"> Click here for more details </a></td>
+            <td><a href="{{ path('book_by_id', {bookId: book.getID}) }}"> Click here for more details </a></td>
         </tr>
     {% endfor %}
     </table>

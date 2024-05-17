@@ -31,11 +31,11 @@
             {%endif%}
         </tr>
     </table>
-    <a href="{{ path('book_delete_by_id', {id: book.getID}) }}">
+    <a href="{{ path('book_delete_by_id', {bookId: book.getID}) }}">
     <input type="submit" value="Delete"></input>
     </a>
 
-    <a href="{{ path('book_edit_by_id', {id: book.getID}) }}">
+    <a href="{{ path('book_edit_by_id', {bookId: book.getID}) }}">
     <input type="submit" value="Edit"></input>
     </a>
 </div>

@@ -74,11 +74,9 @@ class ProductController extends AbstractController
     #[Route('api/library/book/{isbn}', name: 'book_by_isbn')]
     public function showBookByIsbn(
         BooksRepository $bookRepository,
-        ManagerRegistry $doctrine,
         string $isbn
     ): Response {
 
-        // $book = $entityManager->getRepository(Books::class)->find($isbn);
         $book = $bookRepository->findByIsbn($isbn);
 
         
@@ -92,13 +90,13 @@ class ProductController extends AbstractController
 
     }
 
-    #[Route('/book/show/{id}', name: 'book_by_id')]
+    #[Route('/book/show/{bookId}', name: 'book_by_id')]
     public function showBookById(
         BooksRepository $bookRepository,
-        int $id
+        int $bookId
     ): Response {
         $book = $bookRepository
-            ->find($id);
+            ->find($bookId);
 
         $data = [
             'book' => $book
@@ -109,17 +107,17 @@ class ProductController extends AbstractController
 
     }
 
-    #[Route('/book/delete/{id}', name: 'book_delete_by_id')]
+    #[Route('/book/delete/{bookId}', name: 'book_delete_by_id')]
     public function deleteBookById(
         ManagerRegistry $doctrine,
-        int $id
+        int $bookId
     ): Response {
         $entityManager = $doctrine->getManager();
-        $book = $entityManager->getRepository(Books::class)->find($id);
+        $book = $entityManager->getRepository(Books::class)->find($bookId);
 
         if (!$book) {
             throw $this->createNotFoundException(
-                'No book found for id '.$id
+                'No book found for id '.$bookId
             );
         }
 
@@ -129,13 +127,13 @@ class ProductController extends AbstractController
         return $this->redirectToRoute('books_view_all');
     }
 
-    #[Route('/book/edit/{id}', name: 'book_edit_by_id', methods:"GET")]
+    #[Route('/book/edit/{bookId}', name: 'book_edit_by_id', methods:"GET")]
     public function editBookById(
         BooksRepository $bookRepository,
-        int $id
+        int $bookId
     ): Response {
         $book = $bookRepository
-            ->find($id);
+            ->find($bookId);
 
         $data = [
             'book' => $book
@@ -146,15 +144,14 @@ class ProductController extends AbstractController
 
     }
 
-    #[Route('/book/edit/{id}', name: 'book_edit', methods:"POST")]
+    #[Route('/book/edit/{bookId}', name: 'book_edit', methods:"POST")]
     public function editBook(
-        BooksRepository $bookRepository,
         ManagerRegistry $doctrine,
         Request $request,
-        int $id
+        int $bookId
     ): Response {
         $entityManager = $doctrine->getManager();
-        $book = $entityManager->getRepository(Books::class)->find($id);
+        $book = $entityManager->getRepository(Books::class)->find($bookId);
         $title = $request->request->get('title');
         $isbn = $request->request->get('isbn');
         $author = $request->request->get('author');
