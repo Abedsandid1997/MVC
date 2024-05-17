@@ -71,6 +71,26 @@ class ProductController extends AbstractController
         );
         return $response;
     }
+    #[Route('api/library/book/{isbn}', name: 'book_by_isbn')]
+    public function showBookByIsbn(
+        BooksRepository $bookRepository,
+        ManagerRegistry $doctrine,
+        string $isbn
+    ): Response {
+
+        // $book = $entityManager->getRepository(Books::class)->find($isbn);
+        $book = $bookRepository->findByIsbn($isbn);
+
+        
+
+        $response = $this->json($book);
+        $response->setEncodingOptions(
+            $response->getEncodingOptions() | JSON_PRETTY_PRINT
+        );
+        return $response;;
+
+
+    }
 
     #[Route('/book/show/{id}', name: 'book_by_id')]
     public function showBookById(
