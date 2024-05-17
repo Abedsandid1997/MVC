@@ -45,7 +45,8 @@ class AppTwig extends AbstractController
         $jsonRoutes = [
             "/api/quote",
             "/api/deck",
-            "/api/game"
+            "/api/game",
+            "api/library/books"
         ];
 
         $data = [
