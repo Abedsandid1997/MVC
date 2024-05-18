@@ -40,11 +40,11 @@ class ProductController extends AbstractController
         $author = $request->request->get('author');
         $image = $request->request->get('image');
         $books = new Books();
-        $books->setTitle($title);
-        $books->setIsbn($isbn);
-        $books->setAuthor($author);
+        $books->setTitle((string) $title);
+        $books->setIsbn((string) $isbn);
+        $books->setAuthor((string) $author);
         if ($image !== null) {
-            $books->setImageUrl($image);
+            $books->setImageUrl((string) $image);
         }
 
         // tell Doctrine you want to (eventually) save the books
