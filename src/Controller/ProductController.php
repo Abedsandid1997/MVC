@@ -156,11 +156,12 @@ class ProductController extends AbstractController
         $isbn = $request->request->get('isbn');
         $author = $request->request->get('author');
         $image = $request->request->get('image');
-        $book->setTitle($title);
-        $book->setIsbn($isbn);
-        $book->setAuthor($author);
+        /** @var Books $book */
+        $book->setTitle((string) $title);
+        $book->setIsbn((string) $isbn);
+        $book->setAuthor((string) $author);
         if ($image !== null) {
-            $book->setImageUrl($image);
+            $book->setImageUrl((string) $image);
         }
         $entityManager->flush();
         return $this->redirectToRoute('books_view_all');

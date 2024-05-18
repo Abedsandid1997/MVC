@@ -20,7 +20,7 @@ class BooksRepository extends ServiceEntityRepository
      * 
      * @return Books[] Returns an array of Books objects
      */
-    public function findByIsbn($isbn): array
+    public function findByIsbn(string $isbn): array
     {
         return $this->createQueryBuilder('p')
             ->andWhere('p.isbn = :isbn')
