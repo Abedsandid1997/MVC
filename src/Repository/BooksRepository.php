@@ -17,7 +17,7 @@ class BooksRepository extends ServiceEntityRepository
     }
     /**
      * Find book having a isbn above the specified one.
-     * 
+     *
      * @return Books[] Returns an array of Books objects
      */
     public function findByIsbn(string $isbn): array

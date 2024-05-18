@@ -108,15 +108,15 @@
                                 <section>
                                         <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/app.html">App</a></li>
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/app-game.html">Game</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/app-repository.html">Repository</a></li>
     </ul>
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    GraficCard
+    BooksRepository
 
         <span class="phpdocumentor-element__extends">
-        extends <a href="classes/App-Game-Cards.html"><abbr title="\App\Game\Cards">Cards</abbr></a>
+        extends <abbr title="\Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository">ServiceEntityRepository</abbr>
     </span>
     
             <div class="phpdocumentor-element__package">
@@ -135,21 +135,37 @@
 </div>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Game/GraficCard.php"><a href="files/src-game-graficcard.html"><abbr title="src/Game/GraficCard.php">GraficCard.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Repository/BooksRepository.php"><a href="files/src-repository-booksrepository.html"><abbr title="src/Repository/BooksRepository.php">BooksRepository.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">5</span>
+    <span class="phpdocumentor-element-found-in__line">12</span>
 
     </aside>
 
         
 
 
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="classes/App-Repository-BooksRepository.html#tags" class="headerlink"><i class="fas fa-link"></i></a>
+
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">extends</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                
+                                                 <section class="phpdocumentor-description"><p>ServiceEntityRepository&lt;Books&gt;</p>
+</section>
+
+                                    </dd>
+                                            </dl>
 
 
 
 <h3 id="toc">
     Table of Contents
-    <a href="classes/App-Game-GraficCard.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/App-Repository-BooksRepository.html#toc" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h3>
 
@@ -161,61 +177,25 @@
 
 
 
-<h4 id="toc-properties">
-    Properties
-    <a href="classes/App-Game-GraficCard.html#toc-properties" class="headerlink"><i class="fas fa-link"></i></a>
-
-</h4>
-<dl class="phpdocumentor-table-of-contents">
-            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
-    <a href="classes/App-Game-GraficCard.html#property_imagePath">$imagePath</a>
-    <span>
-                        &nbsp;: string            </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
-    <a href="classes/App-Game-Cards.html#property_suit">$suit</a>
-    <span>
-                        &nbsp;: string            </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
-    <a href="classes/App-Game-Cards.html#property_value">$value</a>
-    <span>
-                        &nbsp;: string            </span>
-</dt>
-
-    </dl>
 
 <h4 id="toc-methods">
     Methods
-    <a href="classes/App-Game-GraficCard.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
+    <a href="classes/App-Repository-BooksRepository.html#toc-methods" class="headerlink"><i class="fas fa-link"></i></a>
 
 </h4>
 <dl class="phpdocumentor-table-of-contents">
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Game-GraficCard.html#method___construct">__construct()</a>
+    <a href="classes/App-Repository-BooksRepository.html#method___construct">__construct()</a>
     <span>
                                 &nbsp;: mixed    </span>
 </dt>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Game-GraficCard.html#method_getCard">getCard()</a>
+    <a href="classes/App-Repository-BooksRepository.html#method_findByIsbn">findByIsbn()</a>
     <span>
-                                &nbsp;: string    </span>
+                                &nbsp;: array&lt;string|int, <a href="classes/App-Entity-Books.html"><abbr title="\App\Entity\Books">Books</abbr></a>&gt;    </span>
 </dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Game-Cards.html#method_getSuit">getSuit()</a>
-    <span>
-                                &nbsp;: string    </span>
-</dt>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/App-Game-Cards.html#method_getValue">getValue()</a>
-    <span>
-                                &nbsp;: string    </span>
-</dt>
+<dd>Find book having a isbn above the specified one.</dd>
 
     </dl>
 
@@ -225,117 +205,11 @@
         
 
         
-    <section class="phpdocumentor-properties">
-        <h3 class="phpdocumentor-elements__header" id="properties">
-            Properties
-            <a href="classes/App-Game-GraficCard.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
-
-        </h3>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -protected
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_imagePath">
-        $imagePath
-        <a href="classes/App-Game-GraficCard.html#property_imagePath" class="headerlink"><i class="fas fa-link"></i></a>
-
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Game/GraficCard.php"><a href="files/src-game-graficcard.html"><abbr title="src/Game/GraficCard.php">GraficCard.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">7</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">protected</span>
-        <span class="phpdocumentor-signature__type">string</span>
-    <span class="phpdocumentor-signature__name">$imagePath</span>
-    </code>
-
-    
-    
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -protected
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_suit">
-        $suit
-        <a href="classes/App-Game-Cards.html#property_suit" class="headerlink"><i class="fas fa-link"></i></a>
-
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Cards.php"><a href="files/src-game-cards.html"><abbr title="src/Game/Cards.php">Cards.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">8</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">protected</span>
-        <span class="phpdocumentor-signature__type">string</span>
-    <span class="phpdocumentor-signature__name">$suit</span>
-    </code>
-
-    
-    
-    
-
-</article>
-                    <article
-        class="
-            phpdocumentor-element
-            -property
-            -protected
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="property_value">
-        $value
-        <a href="classes/App-Game-Cards.html#property_value" class="headerlink"><i class="fas fa-link"></i></a>
-
-        <span class="phpdocumentor-element__modifiers">
-                                </span>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Cards.php"><a href="files/src-game-cards.html"><abbr title="src/Game/Cards.php">Cards.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">7</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">protected</span>
-        <span class="phpdocumentor-signature__type">string</span>
-    <span class="phpdocumentor-signature__name">$value</span>
-    </code>
-
-    
-    
-    
-
-</article>
-            </section>
 
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/App-Game-GraficCard.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/App-Repository-BooksRepository.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
 
         </h3>
                     <article
@@ -346,20 +220,20 @@
 >
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
-        <a href="classes/App-Game-GraficCard.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/App-Repository-BooksRepository.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Game/GraficCard.php"><a href="files/src-game-graficcard.html"><abbr title="src/Game/GraficCard.php">GraficCard.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Repository/BooksRepository.php"><a href="files/src-repository-booksrepository.html"><abbr title="src/Repository/BooksRepository.php">BooksRepository.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">8</span>
+    <span class="phpdocumentor-element-found-in__line">14</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$suit</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                    <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><abbr title="\Doctrine\Persistence\ManagerRegistry">ManagerRegistry</abbr>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$registry</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
@@ -367,15 +241,8 @@
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$suit</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$value</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                <span class="phpdocumentor-signature__argument__name">$registry</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><abbr title="\Doctrine\Persistence\ManagerRegistry">ManagerRegistry</abbr></span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
                 
@@ -392,102 +259,47 @@
             -public
                                                         "
 >
-    <h4 class="phpdocumentor-element__name" id="method_getCard">
-        getCard()
-        <a href="classes/App-Game-GraficCard.html#method_getCard" class="headerlink"><i class="fas fa-link"></i></a>
+    <h4 class="phpdocumentor-element__name" id="method_findByIsbn">
+        findByIsbn()
+        <a href="classes/App-Repository-BooksRepository.html#method_findByIsbn" class="headerlink"><i class="fas fa-link"></i></a>
 
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Game/GraficCard.php"><a href="files/src-game-graficcard.html"><abbr title="src/Game/GraficCard.php">GraficCard.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Repository/BooksRepository.php"><a href="files/src-repository-booksrepository.html"><abbr title="src/Repository/BooksRepository.php">BooksRepository.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">14</span>
+    <span class="phpdocumentor-element-found-in__line">23</span>
 
     </aside>
 
-    
+        <p class="phpdocumentor-summary">Find book having a isbn above the specified one.</p>
+
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getCard</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                    <span class="phpdocumentor-signature__name">findByIsbn</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$isbn</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/App-Entity-Books.html"><abbr title="\App\Entity\Books">Books</abbr></a>&gt;</span></code>
 
     <div class="phpdocumentor-label-line">
         </div>
     
-    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$isbn</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
     
 
             <section>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">string</span>
-            </section>
+        <span class="phpdocumentor-signature__response_type">array&lt;string|int, <a href="classes/App-Entity-Books.html"><abbr title="\App\Entity\Books">Books</abbr></a>&gt;</span>
+                    &mdash;
+                <section class="phpdocumentor-description"><p>Returns an array of Books objects</p>
+</section>
 
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_getSuit">
-        getSuit()
-        <a href="classes/App-Game-Cards.html#method_getSuit" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Cards.php"><a href="files/src-game-cards.html"><abbr title="src/Game/Cards.php">Cards.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">22</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getSuit</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">string</span>
-            </section>
-
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_getValue">
-        getValue()
-        <a href="classes/App-Game-Cards.html#method_getValue" class="headerlink"><i class="fas fa-link"></i></a>
-
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Game/Cards.php"><a href="files/src-game-cards.html"><abbr title="src/Game/Cards.php">Cards.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">18</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                    <span class="phpdocumentor-signature__name">getValue</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
-
-    <div class="phpdocumentor-label-line">
-        </div>
-    
-    
-    
-
-            <section>
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-        <span class="phpdocumentor-signature__response_type">string</span>
             </section>
 
 </article>
@@ -497,7 +309,7 @@
     <div class="phpdocumentor-modal-bg" data-exit-button></div>
     <div class="phpdocumentor-modal-container">
         <div class="phpdocumentor-modal-content">
-            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/Game/GraficCard.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+            <pre style="max-height: 500px; overflow-y: scroll" data-src="files/src/Repository/BooksRepository.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
         </div>
         <button data-exit-button class="phpdocumentor-modal__close">&times;</button>
     </div>
@@ -596,27 +408,16 @@
             <li class="phpdocumentor-on-this-page-section__title">Table Of Contents</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                                            <li><a href="classes/App-Game-GraficCard.html#toc-properties">Properties</a></li>
-                                                            <li><a href="classes/App-Game-GraficCard.html#toc-methods">Methods</a></li>
+                                                                                <li><a href="classes/App-Repository-BooksRepository.html#toc-methods">Methods</a></li>
                                     </ul>
             </li>
             
-                            <li class="phpdocumentor-on-this-page-section__title">Properties</li>
-                <li>
-                    <ul class="phpdocumentor-list -clean">
-                                                    <li><a href="classes/App-Game-GraficCard.html#property_imagePath">$imagePath<a href="classes/App-Game-GraficCard.html"></li>
-                                                    <li><a href="classes/App-Game-Cards.html#property_suit">$suit<a href="classes/App-Game-GraficCard.html"></li>
-                                                    <li><a href="classes/App-Game-Cards.html#property_value">$value<a href="classes/App-Game-GraficCard.html"></li>
-                                            </ul>
-                </li>
             
                         <li class="phpdocumentor-on-this-page-section__title">Methods</li>
             <li>
                 <ul class="phpdocumentor-list -clean">
-                                            <li><a href="classes/App-Game-GraficCard.html#method___construct">__construct()</a></li>
-                                            <li><a href="classes/App-Game-GraficCard.html#method_getCard">getCard()</a></li>
-                                            <li><a href="classes/App-Game-Cards.html#method_getSuit">getSuit()</a></li>
-                                            <li><a href="classes/App-Game-Cards.html#method_getValue">getValue()</a></li>
+                                            <li><a href="classes/App-Repository-BooksRepository.html#method___construct">__construct()</a></li>
+                                            <li><a href="classes/App-Repository-BooksRepository.html#method_findByIsbn">findByIsbn()</a></li>
                                     </ul>
             </li>
                     </ul>
@@ -636,7 +437,7 @@
     </section>
 </section>
         </div>
-        <a href="classes/App-Game-GraficCard.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/App-Repository-BooksRepository.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

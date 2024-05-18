@@ -79,13 +79,14 @@ class ProductController extends AbstractController
 
         $book = $bookRepository->findByIsbn($isbn);
 
-        
+
 
         $response = $this->json($book);
         $response->setEncodingOptions(
             $response->getEncodingOptions() | JSON_PRETTY_PRINT
         );
-        return $response;;
+        return $response;
+        ;
 
 
     }
@@ -168,7 +169,7 @@ class ProductController extends AbstractController
 
 
     }
-    
+
 
     #[Route('/books/view', name: 'books_view_all')]
     public function viewAllBooks(

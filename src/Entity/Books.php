@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\BooksRepository;
 use Doctrine\ORM\Mapping as ORM;
+
 /**
  * This will suppress all the PMD warnings in
  * this class.

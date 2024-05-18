@@ -10,6 +10,7 @@
         {% for route in json_routes %}
             <li><a href="{{ path(route) }}">{{ route }}</a></li>
         {% endfor %}
+        <li><a href="{{ path("book_by_isbn",{isbn: "9780141439518"}) }}">api/library/book/isbn(9780141439518)</a></li>
     </ul>
         
      <h1>Post routs</h1>
