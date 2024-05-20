@@ -30,3 +30,11 @@ För att köra webbapplikationen lokalt på din dator, följ dessa steg:
 
    ```bash
    git clone https://github.com/Abedsandid1997/MVC
+
+   
+## Scrutinizer badges:
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Abedsandid1997/MVC/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/Abedsandid1997/MVC/?branch=main)
+[![Code Coverage](https://scrutinizer-ci.com/g/Abedsandid1997/MVC/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/Abedsandid1997/MVC/?branch=main)
+[![Build Status](https://scrutinizer-ci.com/g/Abedsandid1997/MVC/badges/build.png?b=main)](https://scrutinizer-ci.com/g/Abedsandid1997/MVC/build-status/main)
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/Abedsandid1997/MVC/badges/code-intelligence.svg?b=main)](https://scrutinizer-ci.com/code-intelligence)
+

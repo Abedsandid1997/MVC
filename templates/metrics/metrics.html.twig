@@ -1,0 +1,171 @@
+{% extends 'base5.html.twig' %}
+
+{% block title %}Metrics{% endblock %}
+
+{% block body %}
+
+
+<div class="me">
+     <h1>Metrics repport</h1>
+     <h2> Introduktion</h2>
+    Inom mjukvaruutveckling finns det sex viktiga principer, kända som de sex C:na, som hjälper till att säkerställa hög kodkvalitet. Dessa principer är: Codestyle, Coverage, Complexity, Cohesion, Coupling och CRAP (Change Risk Analysis and Predictions). Att följa dessa principer bidrar till att koden blir lättare att underhålla, mer förståelig och mindre benägen att innehålla fel. Nedan förklaras de sex C:na och hur de kan påverka kodens kvalitet, med exempel och mätvärden som illustrerar deras betydelse.
+
+<h3> Codestyle (Kodstil)</h3>
+<p>
+<strong>Codestyle</strong> innebär att koden följer en enhetlig stil och konventioner genom hela projektet. Detta innefattar allt från namngivning av variabler och funktioner till indentering och kodlayout. En enhetlig kodstil gör koden lättare att läsa och förstå för alla som arbetar med den.
+
+Mätvärde: Användning av linters som ESLint för JavaScript eller PEP 8 för Python. Dessa verktyg kan automatiskt kontrollera koden mot definierade stilriktlinjer och rapportera avvikelser. Exempelvis kan en linterrapport visa att 95% av koden följer stilriktlinjerna, vilket indikerar god kodkvalitet.
+</p>
+
+
+<h3> Coverage (Täckning)</h3>
+<p>
+
+<strong>Coverage</strong> avser omfattningen av kod som är täckt av automatiserade tester. Hög täckning innebär att en stor del av koden testas regelbundet, vilket minskar risken för fel och regressioner.
+
+Mätvärde: Testtäckning, mätt som en procentandel av koden som är täckt av tester. Till exempel kan ett mätvärde på 85% täckning indikera att majoriteten av koden är testad, vilket bidrar till högre kodkvalitet.
+</p>
+
+
+<h3> Complexity (Komplexitet)</h3>
+<p>
+
+<strong>Komplexitet</strong> mäter hur komplicerad koden är, vilket kan påverka hur lätt den är att förstå och underhålla. Hög komplexitet kan leda till fler fel och svårigheter vid vidareutveckling.
+
+Mätvärde: Cyclomatic Complexity, som mäter antalet oberoende vägar genom en kodmodul. En modul med hög komplexitet (t.ex. ett värde över 10) kan vara svår att förstå och bör förenklas för att förbättra kodkvaliteten.
+</p>
+
+
+<h3> Cohesion (Sammanhållning)</h3>
+<p>
+
+<strong>Cohesion</strong> refererar till hur väl olika delar av en modul arbetar tillsammans för att utföra en specifik uppgift. Hög sammanhållning innebär att moduler är väl definierade och fokuserade på en enda uppgift, vilket gör dem lättare att underhålla och återanvända.
+
+Mätvärde: Lack of Cohesion in Methods (LCOM), som mäter hur väl metoder i en klass är relaterade till varandra. Ett lågt LCOM-värde indikerar hög sammanhållning och bättre kodkvalitet.
+</p>
+
+
+<h3> Coupling (Koppling)</h3>
+<p>
+
+<strong>Coupling</strong> beskriver graden av beroenden mellan olika moduler eller klasser. Låg koppling innebär att moduler är mer självständiga och kan förändras utan att påverka andra delar av systemet.
+
+Mätvärde: Afferent and Efferent Coupling, som mäter antalet beroenden in och ut från en modul. Lägre värden indikerar mindre beroenden och högre kodkvalitet.
+</p>
+
+<h3> CRAP (Change Risk Analysis and Predictions)</h3>
+<p>
+
+<strong>CRAP</strong> score kombinerar komplexitet och testtäckning för att ge en indikation på hur riskfylld en kodbas är. En hög CRAP-score indikerar att koden är både komplex och otillräckligt testad, vilket innebär högre risk för problem vid förändringar.
+
+Mätvärde: CRAP score, som beräknas genom att kombinera komplexitetsvärden och testtäckningsprocent. En score över 30 indikerar att koden är riskabel och bör förbättras för att säkerställa högre kvalitet.
+
+Genom att mäta och förbättra dessa sex områden kan utvecklare säkerställa att deras kod håller hög kvalitet, vilket underlättar underhåll och vidareutveckling, samt minskar risken för buggar och problem i produktionen.
+</p>
+
+<h2>Phpmetrics</h2>
+<p>
+<strong>Phpmetrics</strong> är ett verktyg som ger detaljerade mätvärden för att analysera kvaliteten och underhållbarheten hos PHP-kod. Baserat på den tillhandahållna Phpmetrics-rapporten, låt oss analysera några viktiga mätvärden för att identifiera potentiella flaskhalsar och förbättringsområden.
+
+
+</p>
+<p>
+ 
+Visualiseringen nedan visar komplexiteten och maintainibillty index hos klasserna.
+Stora röda cirklar indikerar klasser med hög cyklomatisk komplexitet och låg underhållbarhet.
+</p>
+
+        <img  width="800" src="{{ asset('img/phpmetrics.png') }}" alt="">
+<p>
+    <strong>Metrics </strong> visar att det finns många klasser i min kod som har hög komplexitet och ett lågt maintainibillty index,
+    vilket visualiseringarna tydligt demonstrerar. Dessutom saknar många av dessa klasser enhetstester,
+    vilket kan bidra till deras höga komplexitet.
+    Nedan identifieras specifika klasser som kan förbättras för att öka kodkvaliteten och underhållbarheten.
+</p>
+<p>
+<strong>1- App\Controller\KortSpel</strong>
+<br>
+Hög komplexitet: Cyklomatisk komplexitet är 8 och relativ systemkomplexitet är 361.33.
+<br>
+maintainibillty index: Låg maintainibillty index (62.59) på grund av komplexiteten.
+<br>
+förbättring:  Refaktorera KortSpel-klassen för att minska komplexiteten.
+Bryt ner komplexa metoder i mindre, mer hanterbara funktioner. Använd designmönster som Strategy eller State om tillämpligt.
+</p>
+<p>
+<strong>2- App\Controller\CardGameController2</strong>
+<br>
+Hög komplexitet: Cyklomatisk komplexitet är 13 och relativ systemkomplexitet är 196.61.
+<br>
+maintainibillty index: Låg maintainibillty index (55.4) på grund av komplexiteten.
+<br>
+Buggar och defekter: Hög risk för buggar (0.61) och defekter (1.33).
+<br>
+förbättring:  Förenkla logiken, förbättra dokumentationen och introducera enhetstester för att säkerställa kvalitet.
+</p>
+
+<p>
+<strong>3- App\Controller\ProductController</strong>
+<br>
+Hög komplexitet: Cyklomatisk komplexitet är 4, vilket innebär att det finns flera beslutspunkter i koden.
+<br>
+maintainibillty index: Låg maintainibillty index (62.32) på grund av komplexiteten.
+<br>
+Buggar och defekter: Klassen har en relativt hög risk för buggar (0.38) och defekter (0.36).
+<br>
+förbättring: Dela upp stora och komplexa metoder i mindre, mer hanterbara metoder.
+Detta minskar antalet beslutspunkter och gör koden lättare att förstå.
+</p>
+<p>
+Genom att fokusera på dessa förbättringsområden kan vi minska komplexiteten,
+förbättra underhållbarheten och säkerställa högre kodkvalitet i vår kodbas.
+</p>
+
+<h2>Scrutinizer</h2>
+        <img  width="800" src="{{ asset('img/scrutinizer.png') }}" alt="">
+<p>
+
+
+<strong>Scrutinizer</strong> är ett kraftfullt verktyg som ger insikt i kodens kvalitet
+genom att analysera olika metriker såsom kodtäckning och "crap score".
+Min kod fick ett betyg på 9.91, vilket tyder på att den är välstrukturerad och av hög kvalitet.
+Trots detta upptäckte jag att kodtäckningen är låg,
+vilket indikerar att det finns flera klasser som saknar enhetstester.
+För att förbättra detta behöver jag skriva fler enhetstester för att öka kodtäckningen och minska "crap score".
+<br><br>
+
+Det är också värt att notera att de flesta av mina metoder har fått högsta betyg,
+förutom getScore-metoderna i Bank- och Player-klasserna som fick betyget B.
+Det är nödvändigt att undersöka varför dessa metoder inte fick det högsta betyget
+och eventuellt göra nödvändiga förbättringar för att optimera dem.
+<br><br>
+Vid en närmare granskning av de issues som identifierades,
+märkte jag att fem av dem är kopplade till klasser som jag skapat men inte längre använder i min kod.
+För att förbättra kvaliteten på min kod och minska onödig komplexitet, behöver jag ta bort dessa oanvända klasser.
+<br><br>
+För att förbättra mitt betyg och kvaliteten på min kod måste jag genomföra tre åtgärder:
+<br>
+1- Skriva fler enhetstester för att öka kodtäckningen och minska "crap score".
+<br>
+2- Utvärdera och eventuellt omarbeta getScore-metoderna i Bank- och Player-klasserna för att förbättra deras betyg.
+<br>
+3- Rensa upp min kod genom att ta bort oanvända klasser för att minska onödig komplexitet och förbättra överskådligheten.
+<br>
+<br>
+
+Scrutinizer badges:
+        <br><br>
+        <img  src="{{ asset('https://scrutinizer-ci.com/g/Abedsandid1997/MVC/badges/quality-score.png?b=main') }}" alt="">
+        <img  src="{{ asset('https://scrutinizer-ci.com/g/Abedsandid1997/MVC/badges/coverage.png?b=main') }}" alt="">
+        <img  src="{{ asset('https://scrutinizer-ci.com/g/Abedsandid1997/MVC/badges/build.png?b=main') }}" alt="">
+        <img  src="{{ asset('https://scrutinizer-ci.com/g/Abedsandid1997/MVC/badges/build.png?b=main') }}" alt="">
+
+
+
+
+
+
+</p>
+
+</div>
+{% endblock %}

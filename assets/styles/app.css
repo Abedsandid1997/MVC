@@ -10,10 +10,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    align-items: center;
 }
 
 header{
     height: 100px;
+    width: 100%;
 }
 
 .nav ul {
@@ -82,7 +84,7 @@ nav a:hover {
     gap:10px;
     background-color: #b8daff;
     flex: 1;
-
+    width: 80%;
 
 }
 h1{
@@ -99,6 +101,7 @@ h1{
     color: white;
     padding: 0 1em;
     margin-top: auto;
+    width: 100%;
 }
 
 /*
