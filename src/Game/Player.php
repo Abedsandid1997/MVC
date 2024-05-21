@@ -42,39 +42,39 @@ class Player
     public function getScore(): int
     {
         $score = 0;
-        $aceCount = 0;
+    $aceCount = 0;
+    
+    // Associativ array för att mappa kortvärden till numeriska värden
+    $cardValues = [
+        'Ess' => 1,
+        'Kung' => 13,
+        'Knekt' => 11,
+        'Dam' => 12
+    ];
 
-        foreach ($this->hand as $card) {
-            switch ($card->getValue()) {
-                case 'Ess':
-                    $aceCount++;
-                    break;
-                case 'Kung':
-                    $score += 13;
-                    break;
-                case 'Knekt':
-                    $score += 11;
-                    break;
-                case 'Dam':
-                    $score += 12;
-                    break;
-                default:
-                    $score += intval($card->getValue());
-                    break;
-            }
+    foreach ($this->hand as $card) {
+        $cardValue = $card->getValue();
+
+        if (isset($cardValues[$cardValue])) {
+            $score += $cardValues[$cardValue];
+        }elseif ($cardValue === 'Ess') {
+            $aceCount++;
+        } else {
+            $score += intval($cardValue);
         }
 
-        for ($i = 0; $i < $aceCount; $i++) {
-            $aceValue = 1;
-            if ($score + 11 <= 21) {
-                $aceValue = 11;
+        
+    }
 
-            }
-            $score += $aceValue;
-
+    for ($i = 0; $i < $aceCount; $i++) {
+        $aceValue = 1;
+        if ($score + 11 <= 21) {
+            $aceValue = 11;
         }
+        $score += $aceValue;
+    }
 
-        return $score;
+    return $score;
     }
     public function logic(): bool
     {
