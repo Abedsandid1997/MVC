@@ -58,23 +58,35 @@ class Player
             $score += $cardValues[$cardValue];
         }elseif ($cardValue === 'Ess') {
             $aceCount++;
-        } else {
+        }
+        if (!isset($cardValues[$cardValue]) && $cardValue !== 'Ess') {
             $score += intval($cardValue);
         }
 
         
     }
-
-    for ($i = 0; $i < $aceCount; $i++) {
-        $aceValue = 1;
-        if ($score + 11 <= 21) {
-            $aceValue = 11;
-        }
-        $score += $aceValue;
-    }
-
+    $aceValue = $this->getEssScore($score, $aceCount);
+    
+    $score += $aceValue;
     return $score;
     }
+
+    public function getEssScore(int $score ,int $aceCount): int
+    {
+        $aceScore = 0;
+        for ($i = 0; $i < $aceCount; $i++) {
+            $aceValue = 1;
+            if ($score + 11 <= 21) {
+                $aceValue = 11;
+            }
+            $score += $aceValue;
+            $aceScore += $aceValue;
+            
+        }
+        return $aceScore;
+
+    }
+
     public function logic(): bool
     {
         $score = $this->getScore(); // Spara bankens poäng i en variabel
@@ -85,6 +97,7 @@ class Player
         }
         return false;
     }
+
 
 
 }
