@@ -1,50 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="30" assertions="58" errors="0" warnings="0" failures="0" skipped="0" time="0.055296">
-    <testsuite name="Project Test Suite" tests="30" assertions="58" errors="0" warnings="0" failures="0" skipped="0" time="0.055296">
-      <testsuite name="App\Entity\BooksTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Books/BooksTest.php" tests="4" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.007279">
-        <testcase name="testSetAndGetTitle" class="App\Entity\BooksTest" classname="App.Entity.BooksTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Books/BooksTest.php" line="20" assertions="1" time="0.006466"/>
-        <testcase name="testSetAndGetIsbn" class="App\Entity\BooksTest" classname="App.Entity.BooksTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Books/BooksTest.php" line="28" assertions="1" time="0.000311"/>
-        <testcase name="testSetAndGetAuthor" class="App\Entity\BooksTest" classname="App.Entity.BooksTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Books/BooksTest.php" line="36" assertions="1" time="0.000252"/>
-        <testcase name="testSetAndGetImageUrl" class="App\Entity\BooksTest" classname="App.Entity.BooksTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Books/BooksTest.php" line="44" assertions="1" time="0.000250"/>
+  <testsuite name="" tests="32" assertions="61" errors="0" warnings="0" failures="0" skipped="0" time="0.058350">
+    <testsuite name="Project Test Suite" tests="32" assertions="61" errors="0" warnings="0" failures="0" skipped="0" time="0.058350">
+      <testsuite name="App\Entity\BooksTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Books/BooksTest.php" tests="4" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.008165">
+        <testcase name="testSetAndGetTitle" class="App\Entity\BooksTest" classname="App.Entity.BooksTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Books/BooksTest.php" line="20" assertions="1" time="0.007349"/>
+        <testcase name="testSetAndGetIsbn" class="App\Entity\BooksTest" classname="App.Entity.BooksTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Books/BooksTest.php" line="28" assertions="1" time="0.000304"/>
+        <testcase name="testSetAndGetAuthor" class="App\Entity\BooksTest" classname="App.Entity.BooksTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Books/BooksTest.php" line="36" assertions="1" time="0.000253"/>
+        <testcase name="testSetAndGetImageUrl" class="App\Entity\BooksTest" classname="App.Entity.BooksTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Books/BooksTest.php" line="44" assertions="1" time="0.000259"/>
       </testsuite>
-      <testsuite name="App\Game\BankTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" tests="5" assertions="9" errors="0" warnings="0" failures="0" skipped="0" time="0.022472">
-        <testcase name="testCreateBank" class="App\Game\BankTest" classname="App.Game.BankTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" line="17" assertions="1" time="0.001209"/>
-        <testcase name="testGetHandBank" class="App\Game\BankTest" classname="App.Game.BankTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" line="28" assertions="5" time="0.004803"/>
-        <testcase name="testGetScoreBank" class="App\Game\BankTest" classname="App.Game.BankTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" line="52" assertions="1" time="0.000427"/>
-        <testcase name="testGetScoreEssBank" class="App\Game\BankTest" classname="App.Game.BankTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" line="73" assertions="1" time="0.000405"/>
-        <testcase name="testLogicBank" class="App\Game\BankTest" classname="App.Game.BankTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" line="93" assertions="1" time="0.015628"/>
+      <testsuite name="App\Game\BankTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" tests="5" assertions="9" errors="0" warnings="0" failures="0" skipped="0" time="0.021081">
+        <testcase name="testCreateBank" class="App\Game\BankTest" classname="App.Game.BankTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" line="17" assertions="1" time="0.001501"/>
+        <testcase name="testGetHandBank" class="App\Game\BankTest" classname="App.Game.BankTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" line="28" assertions="5" time="0.003185"/>
+        <testcase name="testGetScoreBank" class="App\Game\BankTest" classname="App.Game.BankTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" line="52" assertions="1" time="0.000355"/>
+        <testcase name="testGetScoreEssBank" class="App\Game\BankTest" classname="App.Game.BankTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" line="73" assertions="1" time="0.000298"/>
+        <testcase name="testLogicBank" class="App\Game\BankTest" classname="App.Game.BankTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/BankTest.php" line="93" assertions="1" time="0.015742"/>
       </testsuite>
-      <testsuite name="App\Game\CardTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/CardsTest.php" tests="4" assertions="7" errors="0" warnings="0" failures="0" skipped="0" time="0.001228">
-        <testcase name="testCreateCard" class="App\Game\CardTest" classname="App.Game.CardTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/CardsTest.php" line="17" assertions="1" time="0.000319"/>
-        <testcase name="testGetValueCard" class="App\Game\CardTest" classname="App.Game.CardTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/CardsTest.php" line="28" assertions="2" time="0.000328"/>
-        <testcase name="testGetSuitCard" class="App\Game\CardTest" classname="App.Game.CardTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/CardsTest.php" line="42" assertions="2" time="0.000292"/>
-        <testcase name="testGetCard" class="App\Game\CardTest" classname="App.Game.CardTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/CardsTest.php" line="56" assertions="2" time="0.000288"/>
+      <testsuite name="App\Game\CardTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/CardsTest.php" tests="4" assertions="7" errors="0" warnings="0" failures="0" skipped="0" time="0.001243">
+        <testcase name="testCreateCard" class="App\Game\CardTest" classname="App.Game.CardTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/CardsTest.php" line="17" assertions="1" time="0.000313"/>
+        <testcase name="testGetValueCard" class="App\Game\CardTest" classname="App.Game.CardTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/CardsTest.php" line="28" assertions="2" time="0.000342"/>
+        <testcase name="testGetSuitCard" class="App\Game\CardTest" classname="App.Game.CardTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/CardsTest.php" line="42" assertions="2" time="0.000313"/>
+        <testcase name="testGetCard" class="App\Game\CardTest" classname="App.Game.CardTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/CardsTest.php" line="56" assertions="2" time="0.000276"/>
       </testsuite>
-      <testsuite name="App\Game\DeckOfCardsTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/DeckOfCardsTest.php" tests="5" assertions="10" errors="0" warnings="0" failures="0" skipped="0" time="0.014246">
-        <testcase name="testCreateDeckOfCard" class="App\Game\DeckOfCardsTest" classname="App.Game.DeckOfCardsTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/DeckOfCardsTest.php" line="17" assertions="1" time="0.000530"/>
-        <testcase name="testGetCards" class="App\Game\DeckOfCardsTest" classname="App.Game.DeckOfCardsTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/DeckOfCardsTest.php" line="28" assertions="2" time="0.001142"/>
-        <testcase name="testShuffleCards" class="App\Game\DeckOfCardsTest" classname="App.Game.DeckOfCardsTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/DeckOfCardsTest.php" line="42" assertions="3" time="0.011577"/>
-        <testcase name="testCountCards" class="App\Game\DeckOfCardsTest" classname="App.Game.DeckOfCardsTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/DeckOfCardsTest.php" line="59" assertions="1" time="0.000516"/>
-        <testcase name="testDrawCards" class="App\Game\DeckOfCardsTest" classname="App.Game.DeckOfCardsTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/DeckOfCardsTest.php" line="72" assertions="3" time="0.000481"/>
+      <testsuite name="App\Game\DeckOfCardsTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/DeckOfCardsTest.php" tests="5" assertions="10" errors="0" warnings="0" failures="0" skipped="0" time="0.013339">
+        <testcase name="testCreateDeckOfCard" class="App\Game\DeckOfCardsTest" classname="App.Game.DeckOfCardsTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/DeckOfCardsTest.php" line="17" assertions="1" time="0.000665"/>
+        <testcase name="testGetCards" class="App\Game\DeckOfCardsTest" classname="App.Game.DeckOfCardsTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/DeckOfCardsTest.php" line="28" assertions="2" time="0.001158"/>
+        <testcase name="testShuffleCards" class="App\Game\DeckOfCardsTest" classname="App.Game.DeckOfCardsTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/DeckOfCardsTest.php" line="42" assertions="3" time="0.010456"/>
+        <testcase name="testCountCards" class="App\Game\DeckOfCardsTest" classname="App.Game.DeckOfCardsTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/DeckOfCardsTest.php" line="59" assertions="1" time="0.000552"/>
+        <testcase name="testDrawCards" class="App\Game\DeckOfCardsTest" classname="App.Game.DeckOfCardsTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/DeckOfCardsTest.php" line="72" assertions="3" time="0.000508"/>
       </testsuite>
-      <testsuite name="App\Game\GameTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/GameTest.php" tests="5" assertions="15" errors="0" warnings="0" failures="0" skipped="0" time="0.005665">
-        <testcase name="testCreateGame" class="App\Game\GameTest" classname="App.Game.GameTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/GameTest.php" line="22" assertions="3" time="0.003063"/>
-        <testcase name="testPlayerWinGame" class="App\Game\GameTest" classname="App.Game.GameTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/GameTest.php" line="37" assertions="3" time="0.001194"/>
-        <testcase name="testBankWinGame" class="App\Game\GameTest" classname="App.Game.GameTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/GameTest.php" line="63" assertions="3" time="0.000408"/>
-        <testcase name="testBankLoseGame" class="App\Game\GameTest" classname="App.Game.GameTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/GameTest.php" line="90" assertions="3" time="0.000370"/>
-        <testcase name="testDrawGame" class="App\Game\GameTest" classname="App.Game.GameTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/GameTest.php" line="115" assertions="3" time="0.000630"/>
+      <testsuite name="App\Game\GameTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/GameTest.php" tests="5" assertions="15" errors="0" warnings="0" failures="0" skipped="0" time="0.004434">
+        <testcase name="testCreateGame" class="App\Game\GameTest" classname="App.Game.GameTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/GameTest.php" line="22" assertions="3" time="0.001775"/>
+        <testcase name="testPlayerWinGame" class="App\Game\GameTest" classname="App.Game.GameTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/GameTest.php" line="37" assertions="3" time="0.001190"/>
+        <testcase name="testBankWinGame" class="App\Game\GameTest" classname="App.Game.GameTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/GameTest.php" line="63" assertions="3" time="0.000411"/>
+        <testcase name="testBankLoseGame" class="App\Game\GameTest" classname="App.Game.GameTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/GameTest.php" line="90" assertions="3" time="0.000386"/>
+        <testcase name="testDrawGame" class="App\Game\GameTest" classname="App.Game.GameTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/GameTest.php" line="115" assertions="3" time="0.000673"/>
       </testsuite>
-      <testsuite name="App\Game\GraficCardTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/GraficCardTest.php" tests="2" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.000751">
-        <testcase name="testCreateCard" class="App\Game\GraficCardTest" classname="App.Game.GraficCardTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/GraficCardTest.php" line="17" assertions="1" time="0.000295"/>
-        <testcase name="testGetCard" class="App\Game\GraficCardTest" classname="App.Game.GraficCardTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/GraficCardTest.php" line="28" assertions="2" time="0.000456"/>
+      <testsuite name="App\Game\GraficCardTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/GraficCardTest.php" tests="2" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.000871">
+        <testcase name="testCreateCard" class="App\Game\GraficCardTest" classname="App.Game.GraficCardTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/GraficCardTest.php" line="17" assertions="1" time="0.000455"/>
+        <testcase name="testGetCard" class="App\Game\GraficCardTest" classname="App.Game.GraficCardTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/GraficCardTest.php" line="28" assertions="2" time="0.000416"/>
       </testsuite>
-      <testsuite name="App\Game\PlayerTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/PlayerTest.php" tests="5" assertions="10" errors="0" warnings="0" failures="0" skipped="0" time="0.003655">
-        <testcase name="testCreatePlayer" class="App\Game\PlayerTest" classname="App.Game.PlayerTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/PlayerTest.php" line="17" assertions="1" time="0.000323"/>
-        <testcase name="testGetHandPlayer" class="App\Game\PlayerTest" classname="App.Game.PlayerTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/PlayerTest.php" line="28" assertions="5" time="0.000732"/>
-        <testcase name="testGetScorePlayer" class="App\Game\PlayerTest" classname="App.Game.PlayerTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/PlayerTest.php" line="56" assertions="1" time="0.001187"/>
-        <testcase name="testGetScoreEssPlayer" class="App\Game\PlayerTest" classname="App.Game.PlayerTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/PlayerTest.php" line="88" assertions="1" time="0.000722"/>
-        <testcase name="testLogicPlayer" class="App\Game\PlayerTest" classname="App.Game.PlayerTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/PlayerTest.php" line="112" assertions="2" time="0.000690"/>
+      <testsuite name="App\Game\PlayerTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/PlayerTest.php" tests="5" assertions="10" errors="0" warnings="0" failures="0" skipped="0" time="0.008041">
+        <testcase name="testCreatePlayer" class="App\Game\PlayerTest" classname="App.Game.PlayerTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/PlayerTest.php" line="17" assertions="1" time="0.000295"/>
+        <testcase name="testGetHandPlayer" class="App\Game\PlayerTest" classname="App.Game.PlayerTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/PlayerTest.php" line="28" assertions="5" time="0.000801"/>
+        <testcase name="testGetScorePlayer" class="App\Game\PlayerTest" classname="App.Game.PlayerTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/PlayerTest.php" line="56" assertions="1" time="0.005598"/>
+        <testcase name="testGetScoreEssPlayer" class="App\Game\PlayerTest" classname="App.Game.PlayerTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/PlayerTest.php" line="88" assertions="1" time="0.000714"/>
+        <testcase name="testLogicPlayer" class="App\Game\PlayerTest" classname="App.Game.PlayerTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/PlayerTest.php" line="112" assertions="2" time="0.000632"/>
+      </testsuite>
+      <testsuite name="App\Game\UnicodeCardsTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/UnicodeCardsTest.php" tests="2" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.001175">
+        <testcase name="testCreateUnicodeCard" class="App\Game\UnicodeCardsTest" classname="App.Game.UnicodeCardsTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/UnicodeCardsTest.php" line="17" assertions="1" time="0.000684"/>
+        <testcase name="testGetCard" class="App\Game\UnicodeCardsTest" classname="App.Game.UnicodeCardsTest" file="/home/abed/dbwebb-kurser/mvc/me/report/tests/Game/UnicodeCardsTest.php" line="28" assertions="2" time="0.000491"/>
       </testsuite>
     </testsuite>
   </testsuite>

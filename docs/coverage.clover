@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1716251140">
-  <project timestamp="1716251140">
+<coverage generated="1716251909">
+  <project timestamp="1716251909">
     <file name="/home/abed/dbwebb-kurser/mvc/me/report/src/Cards/DeckSession.php">
       <class name="App\Cards\DeckSession" namespace="global">
         <metrics complexity="3" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="9" coveredelements="0"/>
@@ -536,9 +536,9 @@
       <class name="App\Game\Cards" namespace="global">
         <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="9" coveredelements="9"/>
       </class>
-      <line num="10" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="23"/>
-      <line num="12" type="stmt" count="23"/>
-      <line num="13" type="stmt" count="23"/>
+      <line num="10" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="25"/>
+      <line num="12" type="stmt" count="25"/>
+      <line num="13" type="stmt" count="25"/>
       <line num="18" type="method" name="getValue" visibility="public" complexity="1" crap="1" count="11"/>
       <line num="20" type="stmt" count="11"/>
       <line num="22" type="method" name="getSuit" visibility="public" complexity="1" crap="1" count="1"/>
@@ -653,17 +653,17 @@
     </file>
     <file name="/home/abed/dbwebb-kurser/mvc/me/report/src/Game/UnicodeCards.php">
       <class name="App\Game\UnicodeCards" namespace="global">
-        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="8" coveredelements="0"/>
+        <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
       </class>
-      <line num="7" type="method" name="getCard" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="10" type="stmt" count="0"/>
-      <line num="11" type="stmt" count="0"/>
-      <line num="12" type="stmt" count="0"/>
-      <line num="13" type="stmt" count="0"/>
-      <line num="14" type="stmt" count="0"/>
-      <line num="15" type="stmt" count="0"/>
-      <line num="18" type="stmt" count="0"/>
-      <metrics loc="21" ncloc="19" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="8" coveredelements="0"/>
+      <line num="7" type="method" name="getCard" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="10" type="stmt" count="1"/>
+      <line num="11" type="stmt" count="1"/>
+      <line num="12" type="stmt" count="1"/>
+      <line num="13" type="stmt" count="1"/>
+      <line num="14" type="stmt" count="1"/>
+      <line num="15" type="stmt" count="1"/>
+      <line num="18" type="stmt" count="1"/>
+      <metrics loc="21" ncloc="19" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
     </file>
     <file name="/home/abed/dbwebb-kurser/mvc/me/report/src/Kernel.php">
       <class name="App\Kernel" namespace="global">
@@ -687,6 +687,6 @@
       <line num="31" type="stmt" count="0"/>
       <metrics loc="59" ncloc="28" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="0" elements="10" coveredelements="0"/>
     </file>
-    <metrics files="20" loc="1527" ncloc="1374" classes="19" methods="84" coveredmethods="33" conditionals="0" coveredconditionals="0" statements="482" coveredstatements="115" elements="566" coveredelements="148"/>
+    <metrics files="20" loc="1527" ncloc="1374" classes="19" methods="84" coveredmethods="34" conditionals="0" coveredconditionals="0" statements="482" coveredstatements="122" elements="566" coveredelements="156"/>
   </project>
 </coverage>
