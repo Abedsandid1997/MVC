@@ -42,11 +42,10 @@ class Player
     public function getScore(): int
     {
         $score = 0;
-    $aceCount = 0;
+        $aceCount = 0;
     
     // Associativ array för att mappa kortvärden till numeriska värden
     $cardValues = [
-        'Ess' => 1,
         'Kung' => 13,
         'Knekt' => 11,
         'Dam' => 12
