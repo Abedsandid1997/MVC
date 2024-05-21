@@ -46,7 +46,6 @@ class KortSpel extends AbstractController
         $deck = $session->get("deck");
         $game = $session->get("game");
 
-        // $antalKort = $deck->count();
 
 
 
@@ -57,8 +56,7 @@ class KortSpel extends AbstractController
         $playerCard = $player->getScore();
         $cards =  $player->getHand();
 
-        // $deck = new DeckOfCards();
-        // $Bank= new Bank();
+
 
         $bank = $game->getBank();
 
@@ -113,9 +111,7 @@ class KortSpel extends AbstractController
 
 
 
-        // $numberOfCard = 1;
-        // $draw = $deck->draKort($numberOfCard);
-        // $card = $draw[0];
+
         $game = $session->get("game");
 
         $player = $game->getPlayer();

@@ -12,11 +12,11 @@ class Metrics extends AbstractController
     #[Route("/metrics", name: "metrics")]
     public function metrics(): Response
     {
-        
+
 
         return $this->render('metrics/metrics.html.twig');
     }
 
-    
+
 
 }

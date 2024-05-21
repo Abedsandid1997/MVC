@@ -49,7 +49,7 @@
 <div class="page">
     <div class="content content-first">
         <div class="report-details">
-            Created at 2024-05-20 23:47:59        , with PHPMetrics v2.8.2 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
+            Created at 2024-05-21 03:44:58        , with PHPMetrics v2.8.2 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
         </div>
 
         
@@ -60,24 +60,24 @@
         <div class="bloc bloc-number">
             <div class="label">Test suites</div>
             <div class="number">
-                6            </div>
+                8            </div>
         </div>
     </div>
     <div class="column">
         <div class="bloc bloc-number">
             <div class="label">Assertions</div>
             <div class="number">
-                54            </div>
+                61            </div>
         </div>
     </div>
     <div class="column">
         <div class="bloc bloc-number">
             <div class="label">
                 classes never called by tests
-                <small>(70 %)</small>
+                <small>(60 %)</small>
             </div>
             <div class="number">
-                14            </div>
+                12            </div>
         </div>
     </div>
 </div>
@@ -114,17 +114,6 @@
                                     </td>
                                                             </tr>
                                                         <tr>
-                                <td><span class="path">App\Game\UnicodeCards</span></td>
-                                                                    <td>
-                                        <span class="badge"  style="background-color: hsla(203, 82%, 76%, 0);">
-                                        1                                        </span>
-                                    </td>
-                                                                    <td>
-                                        <span class="badge"  style="background-color: hsla(203, 82%, 76%, 0.02);">
-                                        0.02                                        </span>
-                                    </td>
-                                                            </tr>
-                                                        <tr>
                                 <td><span class="path">App\Repository\BooksRepository</span></td>
                                                                     <td>
                                         <span class="badge"  style="background-color: hsla(203, 82%, 76%, 0);">
@@ -133,17 +122,6 @@
                                                                     <td>
                                         <span class="badge"  style="background-color: hsla(203, 82%, 76%, 0.01);">
                                         0.01                                        </span>
-                                    </td>
-                                                            </tr>
-                                                        <tr>
-                                <td><span class="path">App\Entity\Books</span></td>
-                                                                    <td>
-                                        <span class="badge"  style="background-color: hsla(203, 82%, 76%, 0);">
-                                        1                                        </span>
-                                    </td>
-                                                                    <td>
-                                        <span class="badge"  style="background-color: hsla(203, 82%, 76%, 0.04);">
-                                        0.04                                        </span>
                                     </td>
                                                             </tr>
                                                         <tr>
@@ -291,6 +269,17 @@
                         </thead>
                         <tbody id="contentAreaJunitCalled" class="clusterize-content">
                                                     <tr>
+                                <td valign="top"><span class="path">App\Entity\BooksTest</span></td>
+                                <td style="padding-bottom: 1em;">
+                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">PHPUnit\Framework\TestCase</span>
+                                                                            <br>                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Entity\Books</span>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
                                 <td valign="top"><span class="path">App\Game\BankTest</span></td>
                                 <td style="padding-bottom: 1em;">
                                                                                                                     <span class="badge" title="Cyclomatic complexity of class">
@@ -363,6 +352,17 @@
                                                                             <br>                                        <span class="badge" title="Cyclomatic complexity of class">
                                             1                                        </span>
                                         <span class="path">App\Game\GraficCard</span>
+                                                                    </td>
+                            </tr>
+                                                    <tr>
+                                <td valign="top"><span class="path">App\Game\UnicodeCardsTest</span></td>
+                                <td style="padding-bottom: 1em;">
+                                                                                                                    <span class="badge" title="Cyclomatic complexity of class">
+                                            -                                        </span>
+                                        <span class="path">PHPUnit\Framework\TestCase</span>
+                                                                            <br>                                        <span class="badge" title="Cyclomatic complexity of class">
+                                            1                                        </span>
+                                        <span class="path">App\Game\UnicodeCards</span>
                                                                     </td>
                             </tr>
                                             </table>
@@ -609,7 +609,7 @@
 
 
             
-            var json = {"name":"Execution time","children":[{"name":"App\\Game\\BankTest","time":0.024805},{"name":"App\\Game\\CardTest","time":0.001208},{"name":"App\\Game\\DeckOfCardsTest","time":0.010799},{"name":"App\\Game\\GameTest","time":0.003659},{"name":"App\\Game\\GraficCardTest","time":0.000619},{"name":"App\\Game\\PlayerTest","time":0.003441}]};
+            var json = {"name":"Execution time","children":[{"name":"App\\Entity\\BooksTest","time":0.010438},{"name":"App\\Game\\BankTest","time":0.02958},{"name":"App\\Game\\CardTest","time":0.001733},{"name":"App\\Game\\DeckOfCardsTest","time":0.016819},{"name":"App\\Game\\GameTest","time":0.00623},{"name":"App\\Game\\GraficCardTest","time":0.000826},{"name":"App\\Game\\PlayerTest","time":0.004587},{"name":"App\\Game\\UnicodeCardsTest","time":0.001896}]};
             root = json;
             var nodes = treemap.nodes(json)
                 .filter(function (d) {

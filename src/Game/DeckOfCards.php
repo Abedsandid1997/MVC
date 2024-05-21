@@ -20,10 +20,10 @@ class DeckOfCards
 
         foreach ($suits as $suit) {
             foreach ($values as $value) {
-                
+
                 $this->cards[] = new GraficCard($suit, $value);
 
-                
+
             }
         }
     }

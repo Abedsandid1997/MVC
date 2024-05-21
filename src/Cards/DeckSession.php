@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Cards;
 
 use App\Game\DeckOfCards;
@@ -23,5 +24,5 @@ class DeckSession
         return $newDeck;
     }
 
-    
+
 }

@@ -40,35 +40,35 @@ class Bank
     {
         $score = 0;
         $aceCount = 0;
-    
-    // Associativ array för att mappa kortvärden till numeriska värden
-    $cardValues = [
-        'Kung' => 13,
-        'Knekt' => 11,
-        'Dam' => 12
-    ];
 
-    foreach ($this->hand as $card) {
-        $cardValue = $card->getValue();
+        // Associativ array för att mappa kortvärden till numeriska värden
+        $cardValues = [
+            'Kung' => 13,
+            'Knekt' => 11,
+            'Dam' => 12
+        ];
 
-        if (isset($cardValues[$cardValue])) {
-            $score += $cardValues[$cardValue];
-        }elseif ($cardValue === 'Ess') {
-            $aceCount++;
+        foreach ($this->hand as $card) {
+            $cardValue = $card->getValue();
+
+            if (isset($cardValues[$cardValue])) {
+                $score += $cardValues[$cardValue];
+            } elseif ($cardValue === 'Ess') {
+                $aceCount++;
+            }
+            if (!isset($cardValues[$cardValue]) && $cardValue !== 'Ess') {
+                $score += intval($cardValue);
+            }
+
+
         }
-        if (!isset($cardValues[$cardValue]) && $cardValue !== 'Ess') {
-            $score += intval($cardValue);
-        }
+        $aceValue = $this->getEssScore($score, $aceCount);
 
-        
-    }
-    $aceValue = $this->getEssScore($score, $aceCount);
-    
-    $score += $aceValue;
-    return $score;
+        $score += $aceValue;
+        return $score;
     }
 
-    public function getEssScore(int $score ,int $aceCount): int
+    public function getEssScore(int $score, int $aceCount): int
     {
         $aceScore = 0;
         for ($i = 0; $i < $aceCount; $i++) {
@@ -78,7 +78,7 @@ class Bank
             }
             $score += $aceValue;
             $aceScore += $aceValue;
-            
+
         }
         return $aceScore;
 

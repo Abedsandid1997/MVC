@@ -21,7 +21,6 @@ use Exception;
  */
 class CardGameApi extends AbstractController
 {
-
     private DeckSession $deckSession;
 
     public function __construct(DeckSession $deckSession)

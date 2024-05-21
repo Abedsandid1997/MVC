@@ -8,8 +8,14 @@
 <div class="me">
      <h1>Metrics repport</h1>
      <h2> Introduktion</h2>
-    Inom mjukvaruutveckling finns det sex viktiga principer, kända som de sex C:na, som hjälper till att säkerställa hög kodkvalitet. Dessa principer är: Codestyle, Coverage, Complexity, Cohesion, Coupling och CRAP (Change Risk Analysis and Predictions). Att följa dessa principer bidrar till att koden blir lättare att underhålla, mer förståelig och mindre benägen att innehålla fel. Nedan förklaras de sex C:na och hur de kan påverka kodens kvalitet, med exempel och mätvärden som illustrerar deras betydelse.
-
+    <p>
+    Inom mjukvaruutveckling finns det sex viktiga principer, kända som de sex C:na,
+    som hjälper till att säkerställa hög kodkvalitet. Dessa principer är: Codestyle,
+    Coverage, Complexity, Cohesion, Coupling och CRAP (Change Risk Analysis and Predictions).
+    Att följa dessa principer bidrar till att koden blir lättare att underhålla,
+    mer förståelig och mindre benägen att innehålla fel.
+    Nedan förklaras de sex C:na och hur de kan påverka kodens kvalitet, med exempel och mätvärden som illustrerar deras betydelse.
+    </p>
 <h3> Codestyle (Kodstil)</h3>
 <p>
 <strong>Codestyle</strong> innebär att koden följer en enhetlig stil och konventioner genom hela projektet. Detta innefattar allt från namngivning av variabler och funktioner till indentering och kodlayout. En enhetlig kodstil gör koden lättare att läsa och förstå för alla som arbetar med den.
@@ -203,13 +209,76 @@ Genom att ta bort de duplicerade klasserna förväntar jag mig att kodtäckninge
 Jag vill göra denna förbättring eftersom det kommer att förbättra kodens struktur och eliminera onödig redundans,
 vilket gör projektet mer organiserat och lättare att underhålla.
 <br><br>
+Den fjärde förbättringen jag vill göra är att dela upp getScore-metoden i Player-klassen och Bank-klassen i två separata metoder.
+Detta kommer att minska antalet conditions i dessa metoder,
+vilket i sin tur kommer att minska komplexiteten och öka underhållbarhetsindexet.
+Genom att göra detta hoppas jag också att uppnå en 10 av 10 poäng i Scrutinizer.
+<br><br>
 
-Sammanfattningsvis kommer dessa tre förbättringar – minskning av komplexitet,
-ökning av kodtäckning och fix av issus – att förbättra kodens kvalitet och struktur,
+Sammanfattningsvis kommer dessa fyra förbättringar – minskning av komplexitet,
+ökning av kodtäckning och fix av issus, dela upp getScore-metoden – att förbättra kodens kvalitet och struktur,
 vilket gör den lättare att underhålla och mer pålitlig.
 Genom att genomföra dessa åtgärder förväntar jag mig också att höja mitt Scrutinizer-betyg till 10,
 vilket skulle vara en indikation på att koden har nått en mycket hög standard av kvalitet och underhållbarhet.
 
+</p>
+<h2>Slutresultat</h2>
+<h3>Phpmetrics</h3>
+        <img  width="800" src="{{ asset('img/metricsbefore.png') }}" alt="">
+        <img  width="800" src="{{ asset('img/metricsafter.png') }}" alt="">
+<p>
+I metrics visas nu att min kod har förbättrats avsevärt. Om vi tittar på violations har de minskat från 7 till 6,
+vilket är en betydande förbättring. Jag lyckades också minska den cyklomatiska komplexiteten från 3.58 till 3.10,
+vilket gör koden lättare att förstå och underhålla.
+<br><br>
+
+Mina tester har ökat från 54 till 61, vilket inte bara ökar kodtäckningen utan även säkerheten och tillförlitligheten av koden.
+Den ökade testmängden gör att fler delar av koden nu är verifierade och fungerar som förväntat.
+<br><br>
+
+Jag har också lyckats minska antalet buggar från 0.13 till 0.12. Genom att dela upp många klasser och metoder
+har jag gjort koden mer modulär och hanterbar. Denna uppdelning bidrar till att minska komplexiteten och öka kodens underhållsbarhet.
+<br><br>
+
+Sammanfattningsvis har dessa förbättringar lett till en mer robust,
+lättläst och lättunderhållen kodbas, vilket är avgörande för framtida utveckling och skalbarhet.
+Slutresultatet är en kodbas av högre kvalitet som är lättare att arbeta med och underhålla över tid.
+</p>
+<h3>Scrutinizer</h3>
+<p>
+
+I Scrutinizer lyckades jag höja min kods betyg från 9.91 till 10 genom att dela upp getScore-metoden i två separata metoder.
+Detta minskade komplexiteten och förbättrade kodens läsbarhet och underhållbarhet.
+Jag minskade också antalet issues från 5 till 1 genom att ta bort alla oanvändbara klasser och
+refaktorera kodavsnitt som orsakade problem.
+Dessutom ökade jag kodtäckningen från 21% till 28% genom att skriva fler och mer omfattande tester.
+Dessa förändringar bidrog inte bara till att förbättra kodens kvalitet och struktur,
+utan gjorde också att systemet blev mer robust och pålitligt.
+</p>
+        <img  width="300" src="{{ asset('img/scrutinizerbefore.png') }}" alt="">
+        <img  width="300" src="{{ asset('img/scrutinizerafter.png') }}" alt="">
+<h2>Diskussion</h2>
+<p>
+Att arbeta med "clean code" med hjälp av metriska och Scrutinizer är ett kraftfullt sätt att förbättra kodkvaliteten
+och skapa mer läsbar och underhållbar kod. Även om det kan vara utmanande i början att förstå alla mätvärden och hur
+de relaterar till kodkvalitet, så ger dessa verktyg en djupgående analys av koden och identifierar problemområden såsom
+kodtäckning, buggar och hög komplexitet.
+<br><br>
+
+Genom att använda dessa verktyg kan man gradvis förbättra kodkvaliteten och göra koden lättare att förstå och underhålla.
+Bland fördelarna märks att man kan minska antalet buggar,
+öka läsbarheten och underhållbarheten samt förbättra kodens prestanda genom att minska komplexiteten.
+<br><br>
+
+Å andra sidan kan det vara svårt i början att komma igång med dessa
+verktyg och det kan vara tidskrävande att åtgärda alla identifierade problem.
+Dessutom finns det alltid en risk att introducera nya buggar när man ändrar i koden.
+<br><br>
+
+Förutom att använda metriska och Scrutinizer finns det andra sätt att arbeta mot "clean code".
+Regelbundna kodgranskningar och att granska koden efter varje klass kan bidra till att förbättra kodkvaliteten över tid.
+Genom att ta itu med problemen steg för steg blir det lättare att upprätthålla en hög standard för kodkvalitet
+och undvika att ackumulera stora mängder teknisk skuld.
 </p>
 </p>
 

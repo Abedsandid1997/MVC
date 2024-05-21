@@ -65,7 +65,7 @@ class CardGameController extends AbstractController
     public function draw(SessionInterface $session): Response
     {
         $deck = $this->deckSession->initializeDeck($session);
-        
+
         $antalKort = $deck->count();
         if ($antalKort <= 0) {
             $deck = $this->deckSession->resetDeck($session);

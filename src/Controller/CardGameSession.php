@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -12,9 +11,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class CardGameSession extends AbstractController
 {
-    
-
-
     #[Route('/session', name: 'session_show')]
     public function show(SessionInterface $session): Response
     {

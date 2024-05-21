@@ -2,7 +2,6 @@
 
 namespace App\Entity;
 
-
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -15,9 +14,9 @@ class BooksTest extends TestCase
      * properties, use no arguments.
      */
 
-    
 
-     public function testSetAndGetTitle():void
+
+    public function testSetAndGetTitle(): void
     {
         $book = new Books();
         $book->setTitle('Harry potter');
@@ -25,7 +24,7 @@ class BooksTest extends TestCase
         $this->assertEquals('Harry potter', $book->getTitle());
     }
 
-    public function testSetAndGetIsbn():void
+    public function testSetAndGetIsbn(): void
     {
         $book = new Books();
         $book->setIsbn('1234567890123');
@@ -33,7 +32,7 @@ class BooksTest extends TestCase
         $this->assertEquals('1234567890123', $book->getIsbn());
     }
 
-    public function testSetAndGetAuthor():void
+    public function testSetAndGetAuthor(): void
     {
         $book = new Books();
         $book->setAuthor('Test Author');
@@ -41,7 +40,7 @@ class BooksTest extends TestCase
         $this->assertEquals('Test Author', $book->getAuthor());
     }
 
-    public function testSetAndGetImageUrl():void
+    public function testSetAndGetImageUrl(): void
     {
         $book = new Books();
         $book->setImageUrl('https://example.com/image.jpg');
@@ -49,7 +48,7 @@ class BooksTest extends TestCase
         $this->assertEquals('https://example.com/image.jpg', $book->getImageUrl());
     }
 
-   
+
 
 
 }

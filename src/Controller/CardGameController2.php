@@ -21,7 +21,6 @@ use Exception;
  */
 class CardGameController2 extends AbstractController
 {
-
     private DeckSession $deckSession;
 
     public function __construct(DeckSession $deckSession)
@@ -33,7 +32,7 @@ class CardGameController2 extends AbstractController
     #[Route("/card/deck/draw/cards", name: "draw_cards_get", methods: ['GET'])]
     public function init(SessionInterface $session): Response
     {
-        
+
         $deck = $this->deckSession->initializeDeck($session);
 
         $antalKort = $deck->count();
@@ -56,7 +55,7 @@ class CardGameController2 extends AbstractController
         int $numCards,
         SessionInterface $session
     ): Response {
-       
+
         $deck = $this->deckSession->initializeDeck($session);
 
         $antalKort = $deck->count();
