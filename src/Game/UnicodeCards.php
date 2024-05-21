@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Cards;
+namespace App\Game;
 
 class UnicodeCards extends Cards
 {

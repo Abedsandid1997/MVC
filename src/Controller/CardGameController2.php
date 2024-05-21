@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
-use App\Cards\DeckOfCards;
+use App\Game\DeckOfCards;
+use App\Cards\DeckSession;
+
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -19,14 +21,21 @@ use Exception;
  */
 class CardGameController2 extends AbstractController
 {
+
+    private DeckSession $deckSession;
+
+    public function __construct(DeckSession $deckSession)
+    {
+        $this->deckSession = $deckSession;
+    }
+
+
     #[Route("/card/deck/draw/cards", name: "draw_cards_get", methods: ['GET'])]
     public function init(SessionInterface $session): Response
     {
-        if (!$session->has('deck')) {
-            $deck = new DeckOfCards();
-            $session->set("deck", $deck);
-        }
-        $deck = $session->get("deck");
+        
+        $deck = $this->deckSession->initializeDeck($session);
+
         $antalKort = $deck->count();
         $data = [
             "antalkort" => $antalKort
@@ -47,17 +56,14 @@ class CardGameController2 extends AbstractController
         int $numCards,
         SessionInterface $session
     ): Response {
-        if (!$session->has('deck')) {
-            $deck = new DeckOfCards();
-            $session->set("deck", $deck);
-        }
-        $deck = $session->get("deck");
+       
+        $deck = $this->deckSession->initializeDeck($session);
+
         $antalKort = $deck->count();
 
         if ($antalKort <= 0) {
-            $newDeck = new DeckOfCards();
-            $session->set("deck", $newDeck);
-            $deck = $session->get("deck");
+            $deck = $this->deckSession->resetDeck($session);
+
             $this->addFlash(
                 'notice',
                 "Kortleken har blivit omställd eftersom alla 52 kort har dragits. Du kan fortsätta att dra kort som vanligt"
@@ -86,131 +92,5 @@ class CardGameController2 extends AbstractController
 
         return $this->render('cards/drawcards.html.twig', $data);
     }
-
-
-    #[Route("/api/deck", name: "/api/deck")]
-    public function jsonDeck(): Response
-    {
-
-
-        $deck = new DeckOfCards();
-
-
-
-        // Hämta alla kort från kortleken
-        $cards = $deck->getCards();
-        $cardData = [];
-        foreach ($cards as $card) {
-            $cardData[] = ($card->getValue() .":" .  $card->getSuit());
-        }
-        $data = [
-            "cards" => $cardData
-        ];
-
-        $response = new JsonResponse($data);
-        $response->setEncodingOptions(
-            $response->getEncodingOptions() | JSON_PRETTY_PRINT
-        );
-        return $response;
-    }
-
-    #[Route("/api/deck/shuffle", name: "/api/deck/shuffle", methods: ['POST'])]
-    public function shuffleDeck(
-        SessionInterface $session
-    ): JsonResponse {
-        // Shuffle the deck and store it in session
-        $deck = new DeckOfCards();
-        $session->set("deck", $deck);
-        $deck->shuffle(); // Shuffle the deck
-        $cards = $deck->getCards();
-        $cardData = [];
-        foreach ($cards as $card) {
-            $cardData[] = ($card->getValue() .":" .  $card->getSuit());
-        }
-        $data = [
-            "cards" => $cardData
-        ];
-        $response = new JsonResponse($data);
-        $response->setEncodingOptions(
-            $response->getEncodingOptions() | JSON_PRETTY_PRINT
-        );
-        return $response;
-    }
-    #[Route("/api/deck/draw", name: "/api/deck/draw", methods: ['POST'])]
-    public function apiDraw(
-        SessionInterface $session
-    ): JsonResponse {
-        if (!$session->has('deck')) {
-            $deck = new DeckOfCards();
-            $session->set("deck", $deck);
-        }
-        $deck = $session->get("deck");
-        $antalKort = $deck->count();
-        if ($antalKort <= 0) {
-            $newDeck = new DeckOfCards();
-            $session->set("deck", $newDeck);
-            $deck = $session->get("deck");
-
-        }
-
-        $numberOfCard = 1;
-        $draw = $deck->draKort($numberOfCard);
-        $card =  ($draw[0]->getValue() .":" .  $draw[0]->getSuit());
-
-        $antalKort = $deck->count();
-        $data = [
-            "card" => $card,
-            "kvarkort" => $antalKort
-        ];
-        $response = new JsonResponse($data);
-        $response->setEncodingOptions(
-            $response->getEncodingOptions() | JSON_PRETTY_PRINT
-        );
-        return $response;
-    }
-
-    #[Route("api/deck/draw/{number}", name: "api/deck/draw/{number}", methods: ['POST'])]
-
-    public function apiDradw(
-        Request $request,
-        SessionInterface $session
-    ): JsonResponse {
-        $numberOfCards = $request->request->get('number');
-        if (!$session->has('deck')) {
-            $deck = new DeckOfCards();
-            $session->set("deck", $deck);
-        }
-        $deck = $session->get("deck");
-        $antalKort = $deck->count();
-
-        if ($antalKort <= 0) {
-            $newDeck = new DeckOfCards();
-            $session->set("deck", $newDeck);
-            $deck = $session->get("deck");
-
-        } elseif ($numberOfCards > $antalKort) {
-            throw new \Exception("Can not draw more than $antalKort cards!");
-
-        }
-        $draw = $deck->draKort($numberOfCards);
-        $antalKort = $deck->count();
-        $cardData = [];
-
-        foreach ($draw as $card) {
-            $cardData[] = ($card->getValue() .":" .  $card->getSuit());
-        }
-        $data = [
-            "cards" => $cardData,
-            "antal" => $numberOfCards,
-            "kortkvar" => $antalKort
-        ];
-        $response = new JsonResponse($data);
-        $response->setEncodingOptions(
-            $response->getEncodingOptions() | JSON_PRETTY_PRINT
-        );
-        return $response;
-    }
-
-
 
 }

@@ -20,15 +20,10 @@ class DeckOfCards
 
         foreach ($suits as $suit) {
             foreach ($values as $value) {
-                // $index = array_search($value, $values);
+                
                 $this->cards[] = new GraficCard($suit, $value);
 
-                // if ($index % 2 === 1) {
-                //     $this->cards[] = new GraficCard($suit, $value);
-                // } else {
-                //     $this->cards[] = new GraficCard($suit, $value);
-
-                // }
+                
             }
         }
     }

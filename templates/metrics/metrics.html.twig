@@ -163,8 +163,54 @@ Scrutinizer badges:
 
 
 
+<h2>Förbättringar</h2>
+<p>
+Jag planerar att förbättra App\Controller\CardGameController1
+genom att omstrukturera dem och dela upp klassen i flera separata klasser.
+En av dessa klasser för sessionkontroller och en annan för att hantera API kontroller.
 
+Och att minska komplexiteten för App\Controller\CardGameController2 genom att dela upp klassen i två separata klasser.
+En av dessa klasser kommer att hantera sessionen, vilket gör att jag slipper ha samma if-sats i flera olika rutter.
+Detta kommer att göra logiken enklare och mer strukturerad.
 
+Jag vill göra denna förbättring eftersom CardGameController2 har hög komplexitet och ett lågt maintainability index.
+vilket leder till en mer effektiv och strukturerad kodbas.
+<br>
+Syftet med denna förändring är att minska den övergripande komplexiteten och förbättra underhållbarheten i CardGameController2,
+som för närvarande lider av hög komplexitet och lågt maintainability index.
+Genom att öka modulariteten och tydligheten i koden förväntar jag mig att komplexiteten minskar och maintainability index ökar.
+Dessutom förväntar jag mig att CRAP-värdet (Change Risk Anti-Patterns) minskar,
+vilket innebär att risken för buggar och felaktigheter minskar.
+
+Denna omstrukturering kommer att göra koden mer lättförståelig och underlätta framtida underhåll, vilket är avgörande för långsiktig hållbarhet och utveckling av programvaran.
+<br><br>
+Nästa steg är att öka kodtäckningen genom att skriva tester för Books-klassen.
+Detta är viktigt eftersom en högre kodtäckning innebär att fler delar av koden testas,
+vilket minskar risken för buggar och förbättrar kodens tillförlitlighet.
+Jag är inte expert på detta och det är första gången jag arbetar med Scrutinizer,
+men jag förväntar mig att kodtäckningen ska öka med minst 10%.
+Jag vill göra denna förbättring eftersom det kommer att bidra till att minska CRAP-värdet för klassen.
+En högre kodtäckning säkerställer att koden fungerar som förväntat och att eventuella problem upptäcks tidigt.
+<br><br>
+
+Den tredje åtgärden jag vill genomföra är att fixa de issus av Scrutinizer.
+Detta innebär att rensa bort alla klasser som jag inte använder, till exempel LuckyNumber-klassen som skapades under en övning.
+Jag ska också konsolidera kortklasserna, som nu finns i två olika mappar,
+så att både CardController och GameController använder dem från samma mapp.
+Jag har redan skrivit tester för de klasser som finns i Game-katalogen,
+även om de är samma klasser som finns i Card-katalogen.
+Genom att ta bort de duplicerade klasserna förväntar jag mig att kodtäckningen ska öka med ytterligare 10%.
+Jag vill göra denna förbättring eftersom det kommer att förbättra kodens struktur och eliminera onödig redundans,
+vilket gör projektet mer organiserat och lättare att underhålla.
+<br><br>
+
+Sammanfattningsvis kommer dessa tre förbättringar – minskning av komplexitet,
+ökning av kodtäckning och fix av issus – att förbättra kodens kvalitet och struktur,
+vilket gör den lättare att underhålla och mer pålitlig.
+Genom att genomföra dessa åtgärder förväntar jag mig också att höja mitt Scrutinizer-betyg till 10,
+vilket skulle vara en indikation på att koden har nått en mycket hög standard av kvalitet och underhållbarhet.
+
+</p>
 </p>
 
 </div>

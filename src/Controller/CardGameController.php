@@ -2,7 +2,8 @@
 
 namespace App\Controller;
 
-use App\Cards\DeckOfCards;
+use App\Game\DeckOfCards;
+use App\Cards\DeckSession;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -12,25 +13,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class CardGameController extends AbstractController
 {
-    #[Route('/session', name: 'session_show')]
-    public function show(SessionInterface $session): Response
-    {
-        $sessionData = $session->all();
+    private DeckSession $deckSession;
 
-        return $this->render('cards/session.html.twig', [
-            'sessionData' => $sessionData,
-        ]);
-    }
-
-    #[Route('/session/delete', name: 'session_delete')]
-    public function delete(SessionInterface $session): Response
+    public function __construct(DeckSession $deckSession)
     {
-        $session->clear();
-        $this->addFlash(
-            'notice',
-            "nu är sessionen raderad"
-        );
-        return $this->redirectToRoute('session_show');
+        $this->deckSession = $deckSession;
     }
 
 
@@ -61,9 +48,9 @@ class CardGameController extends AbstractController
     #[Route("/card/deck/shuffle", name: "deck-shuffle")]
     public function shuffle(SessionInterface $session): Response
     {
-        $deck = new DeckOfCards();
+        $deck = $this->deckSession->initializeDeck($session);
         $deck->shuffle();
-        $session->set("deck", $deck);
+        // $session->set("deck", $deck);
 
         // Hämta alla kort från kortleken
         $cards = $deck->getCards();
@@ -77,18 +64,11 @@ class CardGameController extends AbstractController
     #[Route("/card/deck/draw", name: "deck-draw")]
     public function draw(SessionInterface $session): Response
     {
-        if (!$session->has('deck')) {
-            $deck = new DeckOfCards();
-            $session->set("deck", $deck);
-        }
-        // Ensure $deck is always an instance of DeckOfCards
-        /** @var DeckOfCards $deck */
-        $deck = $session->get("deck");
+        $deck = $this->deckSession->initializeDeck($session);
+        
         $antalKort = $deck->count();
         if ($antalKort <= 0) {
-            $newDeck = new DeckOfCards();
-            $session->set("deck", $newDeck);
-            $deck = $session->get("deck");
+            $deck = $this->deckSession->resetDeck($session);
 
         }
 
