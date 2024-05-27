@@ -1,6 +1,6 @@
 # Min MVC-webbapplikation
 
-![Webbapplikation](./assets/images/webapp.png)
+![Webbapplikation](./assets/images/blackjack.png)
 
 ## Beskrivning
 
@@ -10,26 +10,118 @@ Detta är en webbapplikation utvecklad med MVC (Model-View-Controller) arkitektu
 
 MVC-arkitekturen består av tre huvudkomponenter:
 
-### 1. Model (Modell)
+### 1. Assets
 
-Modellen representerar applikationens data och affärslogik. Den hanterar dataåtkomst, bearbetning av data och affärsregler. Modellen är oberoende av användargränssnittet och kommunicerar vanligtvis med databasen för att hämta och spara data.
+Innehåll: Statisk tillgångar som CSS, JavaScript, och bilder.
+Syfte: Förbättra användargränssnittet och användarupplevelsen.
 
-### 2. View (Vy)
+### 2. Bin
 
-Vyn är ansvarig för att visa data för användaren. Den tar emot data från modellen och formaterar det för att visas på användargränssnittet. Vyn är passiv och reagerar på användarinteraktioner genom att skicka begäranden till kontrollern.
+Innehåll: Skript och binära filer för att hantera projektet.
+Syfte: Hjälpa med projektets konfiguration och hantering.
 
-### 3. Controller (Kontroller)
 
-Kontrollern fungerar som en mellanhand mellan modellen och vyn. Den tar emot användarinteraktioner från vyn, behandlar dem genom att hämta och bearbeta data från modellen och skickar sedan det resultatet tillbaka till vyn för att visas för användaren. Kontrollern styr flödet av applikationen och hanterar användarens begäranden.
+### 3. Config
+
+Innehåll: Konfigurationsfiler för projektet.
+Syfte: Styra inställningar för olika delar av applikationen.
+
+
+### 4. Docs
+
+Innehåll: Dokumentation för projektet.
+Syfte: Ge användare och utvecklare information om hur projektet fungerar och hur det ska användas.
+
+
+### 5. Migrations
+
+Innehåll: Databas-migrationsfiler.
+Syfte: Hantera ändringar i databasens schema över tid.
+
+### 6. Public
+
+Innehåll: Offentligt tillgängliga filer som index.php.
+Syfte: Fungera som ingångspunkt för webbapplikationen.
+
+### 7. Src
+
+Innehåll: Huvudkällkoden för projektet, inklusive klasser och funktioner för BlackJack-spelet.
+Syfte: Implementera den primära funktionaliteten i projektet.
+
+
+### 8. Templates
+
+Innehåll: Twig-mallar för rendering av HTML-sidor.
+Syfte: Styra utseendet och layouten av webbapplikationens sidor.
+
+
+### 9. Tests
+
+Innehåll: Testfall och enhetstester.
+Syfte: Säkerställa att koden fungerar som förväntat och upprätthålla kvalitet.
+
+### 10. Translations
+
+Innehåll: Översättningsfiler.
+Syfte: Stödja flerspråkighet i applikationen.
+
+## Viktiga filer
+
+### .env och .env.test
+
+Syfte: Hålla miljövariabler och konfigurationsinställningar för olika miljöer (utveckling, testning).
+
+### .gitignore
+
+Syfte: Specificera filer och kataloger som ska ignoreras av Git.
+
+### compose.override.yaml och compose.yaml
+
+Syfte: Docker-compose-filer för att hantera containerkonfigurationer.
+
+### composer.json och composer.lock
+
+Syfte: Hantera PHP-dependencies och paket.
+
+### phpunit.xml.dist
+
+Syfte: Konfigurationsfil för PHPUnit-testning.
+
+### webpack.config.js
+
+
+Syfte: Konfigurationsfil för Webpack, som används för att paketera frontend-tillgångar.
+
+
+## Syfte med projektet
+Projektet finns för att skapa en simuleringsmiljö för ett BlackJack-spel där olika strategier och beslut kan implementeras och testas. Det ger en grund för att:
+
+### Utveckla och testa spelstrategier:
+
+Genom olika nivåer av bankens "intelligens" kan man studera och förstå hur olika taktiker påverkar spelets resultat.
+
+### Utveckla webbapplikation:
+
+Med användning av Symfony och andra webbutvecklingsverktyg, kan projektet utvidgas till en fullständig webbapplikation.
+
+### Lära sig programmering och bästa praxis
+
+Projektet fungerar som ett utmärkt exempel för att lära sig moderna utvecklingsmetoder, inklusive testdriven utveckling (TDD), kontinuerlig integration (CI), och containerisering med Docker.
+
+
+### Genom att inkludera all nödvändig funktionalitet från backend-logik till frontend-gränssnitt och testning, erbjuder projektet en komplett miljö för att utforska och utveckla ett BlackJack-spel.
+
 
 ## Kom igång
 
 För att köra webbapplikationen lokalt på din dator, följ dessa steg:
 
-1. Klona detta repository till din lokala maskin med följande kommando:
-
-   ```bash
-   git clone https://github.com/Abedsandid1997/MVC
+1. Klona repot. git clone https://github.com/Abedsandid1997/MVC
+2. Installera PHP- och JavaScript-dependencies.
+3. Konfigurera miljövariabler.
+4. Starta utvecklingsservern.
+5. (Valfritt) Använd Docker för containerisering.
+6. Kör tester för att verifiera installationen.
 
    
 ## Scrutinizer badges:
