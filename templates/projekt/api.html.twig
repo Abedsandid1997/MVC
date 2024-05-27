@@ -21,23 +21,23 @@
 
         <p>
             <input type="submit" name="restart" value="Player darw card"
-    onClick="this.form.action='{{ path('game_player_draw') }}';this.form.method='post';">
+    onClick="this.form.action='{{ path('api_player_draw') }}';this.form.method='post';">
      
         </p>
 
         <p>
             <input type="submit" name="restart" value="Bank darw card"
-    onClick="this.form.action='{{ path('game_bank_draw') }}';this.form.method='get';">
+    onClick="this.form.action='{{ path('api_bank_draw') }}';this.form.method='get';">
      
         </p>
         <p>
             <input type="submit" name="restart" value="Winner"
-    onClick="this.form.action='{{ path('game_winner') }}';this.form.method='get';">
+    onClick="this.form.action='{{ path('api_game_winner') }}';this.form.method='get';">
      
         </p>
         <p>
             <input type="submit" name="restart" value="Game status"
-    onClick="this.form.action='{{ path('game-status') }}';this.form.method='get';">
+    onClick="this.form.action='{{ path('api-game-status') }}';this.form.method='get';">
      
         </p>
     </form>

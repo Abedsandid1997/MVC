@@ -172,7 +172,6 @@ class BlackJack extends AbstractController
         $game = $session->get("game");
         $player = $game->getPlayer();
         // $playerBalance = $player->getBalance();
-        $deck = $session->get("deck");
 
         $currentHand = $player->getactiveHand();
         $antalHands = $game->getHandsNumber();
@@ -270,7 +269,7 @@ class BlackJack extends AbstractController
 
 
     #[Route("/proj/game/palying/table", name: "table")]
-    public function table(SessionInterface $session, Request $request): Response
+    public function table(SessionInterface $session): Response
     {
 
         $deck = $session->get("deck");

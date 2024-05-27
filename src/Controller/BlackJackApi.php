@@ -22,7 +22,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class BlackJackApi extends AbstractController
 {
     #[Route("/proj/api", name: "proj-api")]
-    public function jsonDeck(SessionInterface $session): Response
+    public function jsonDeck(): Response
     {
 
         return $this->render('projekt/api.html.twig');
@@ -83,8 +83,8 @@ class BlackJackApi extends AbstractController
     }
 
 
-    #[Route("proj/api/game/player/draw", name: "game_player_draw", methods: ['POST'])]
-    public function jsonDrawPlayer(SessionInterface $session, Request $request): Response
+    #[Route("proj/api/game/player/draw", name: "api_player_draw", methods: ['POST'])]
+    public function jsonDrawPlayer(SessionInterface $session): Response
     {
         if (!$session->has('deck')) {
             $deck = new DeckOfCards();
@@ -133,7 +133,7 @@ class BlackJackApi extends AbstractController
     }
 
 
-    #[Route("proj/api/game/bank/draw", name: "game_bank_draw", methods: ['GET'])]
+    #[Route("proj/api/game/bank/draw", name: "api_bank_draw", methods: ['GET'])]
     public function jsonDrawBank(SessionInterface $session): Response
     {
         if (!$session->has('deck')) {
@@ -174,7 +174,7 @@ class BlackJackApi extends AbstractController
         );
         return $response;
     }
-    #[Route("proj/api/game/winner", name: "game_winner", methods: ['GET'])]
+    #[Route("proj/api/game/winner", name: "api_game_winner", methods: ['GET'])]
     public function winner(SessionInterface $session): Response
     {
         if (!$session->has('deck')) {
@@ -210,7 +210,7 @@ class BlackJackApi extends AbstractController
         return $response;
     }
 
-    #[Route("proj/api/game/status", name: "game-status")]
+    #[Route("proj/api/game/status", name: "api-game-status")]
     public function gameStatus(SessionInterface $session): Response
     {
 
