@@ -516,6 +516,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-BlackJack.html#method_game"
         },                {
+            "fqsen": "\\App\\Controller\\BlackJack\u003A\u003Aredovisning\u0028\u0029",
+            "name": "redovisning",
+            "summary": "",
+            "url": "classes/App-Controller-BlackJack.html#method_redovisning"
+        },                {
             "fqsen": "\\App\\Controller\\BlackJack\u003A\u003Ashare\u0028\u0029",
             "name": "share",
             "summary": "",

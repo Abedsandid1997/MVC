@@ -31,7 +31,7 @@
  <h3> Bet advice: {{betAdvice}}  </h3>
  
   {% if player_balance == 0 %}
-<a href='{{ path('new_game') }}' class="button button-yellow">Recharg tokens</a>
+<a href='{{ path('proj_new_game') }}' class="button button-yellow">Restart game</a>
 {% endif %}
 <select id="bet-amount" class="bet-amount" name="bet-amount">
         <option value="10">10$</option>

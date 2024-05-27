@@ -171,6 +171,69 @@ Min TIL för detta kursmoment är vikten av att använda pseudokod och flödesdi
     som gav mig verktyg för att bedöma och förbättra min kodkvalitet.
     </p>
     </div>
+
+    <div class="redovisning">
+     <h1><a href="{{ path("kmom10") }}">kmom10</a></h1>
+    <p>
+                Jag har valt att göra ett BlackJack-spel av två anledningar.
+                För det första började jag med det i kursmoment 3,
+                så jag har redan en kodbas att utgå ifrån och en klar bild i huvudet av hur spelet ska vara.
+                För det andra tycker jag om att utveckla spel eftersom det innebär mycket logikprogrammering, vilket jag tycker om.
+            <br>
+            <h2>Krav 1-3</h2>
+            Jag började med att spela BlackJack online för att förstå spelet och spelupplevelsen.
+            Därefter skrev jag klasser som jag skulle behöva, såsom Bank, Player, Game, DeckOfCards och Counter.
+            Jag testade varje klass och metod stegvis, såsom split, bet,
+            kortberäkning som hjälper spelaren att satsa och bedöma svårigheten för datorn.
+            <br>
+            Jag implementerade en räkningsteknik som visar spelaren om hen ska satsa högt eller lågt baserat på de dragna korten.
+            Detta görs genom att räkna korten med plus eller minus och sedan dela det med antalet kvarvarande kort.
+            Dessutom skapade jag en visualiserad statistiktabell som visar vilka kort som har dragits och hur många gånger.
+            <br>
+            För att förbättra spelet, lade jag till en funktion som visar sannolikheten för att spelaren ska bli tjock om ett nytt kort dras.
+            Spelaren kan också välja datorns svårighetsgrad,
+            med tre olika nivåer: easy, basic och advanced.
+            På easy-nivån slutar datorn dra kort vid 20,
+            på basic vid 17 och på advanced räknar datorn kort och bedömer sannolikheten att bli tjock.
+            <br>
+            Jag implementerade även en funktion som tillåter spelaren att splitta handen om hen får två kort med samma värde,
+            och handen kan endast splittas en gång.
+            <br>
+            Att designa spelet var en utmaning eftersom jag ville ge användaren en känsla av verklighet så mycket som möjligt.
+            Jag valde färger som grönt och mörkrött och gjorde spelet lätt att spela.
+            Med hjälp av JavaScript kunde spelaren klicka på kort för att aktivera handen eller välja svårighetsnivå.
+
+            <br>
+            <h3>Testing</h3>
+            Jag började med att skriva tester för mina klasser. Detta var inte lätt eftersom många klasser använder andra klasser,
+            så jag fick mocka metoder och klasser för att kunna testa alla metoder.
+            Jag lyckades få 99,61% kodtäckning för alla klasser som används i projektet (BlackJack-spelet) förutom kontroller.
+            Detta syns tydligt om ni kollar på täckningsrapporten för BlackJack-projektet.
+            <br>
+            Jag genererade dokumentation med PHPDoc och metriker med PHPMetrics.
+            <h2>Krav 4 (JSON API)</h2>
+            Att skriva API-koden var inte så svårt jämfört med själva spelet eftersom jag har arbetat med API
+            under kursen. Jag skapade 6 API-rutter: 3 POST och 3 GET, som gör det möjligt att spela spelet.
+            En ruta för att starta ett spel, en för att spelaren kan dra kort, en för bankens tur,
+            en som visar vinnaren och en som visar spelets status. Jag hanterade POST-förfrågningar med hjälp av JavaScript,
+            där jag använde onclick-metoden för att välja och anropa rätt metod.
+            <br>
+            <h2>Utmaningar och Reflektioner</h2>
+            Att genomföra hela projektet var både svårt och kul.
+            Jag tycker om att programmera logik och lösa problem, men det var svårt eftersom jag inte är duktig på att spela BlackJack.
+            Jag hade problem med att hitta ett sätt att räkna kort (som är en otillåten aktivitet).
+            Jag läste mycket om hur man kan räkna kort och började sedan skriva Counter-klasser som räknar kort och hjälper spelaren att räkna kort.
+            <br>
+            En annan utmaning var split-metoden. I början visste jag inte hur jag skulle göra så att bara kort med samma värde kunde splittas.
+            Jag skapade en metod som kontrollerar om spelaren uppfyller kraven för att splitta,
+            såsom antal tokens och att korten har samma värde, samt att splittade händer inte kan splittas igen.
+            <br>
+            Jag tycker att projektet var lite svårt men roligt att implementera och det passar bra för kursen.
+            Kursen var mycket lärorik, vi lärde oss mycket om PHP-klasser, att arbeta i Symfony-miljö och att använda verktyg som Metrics,
+            Scrutinizer, PHPStan och PHPMD. Lärarna var mycket hjälpsamma och jag fick snabba svar på mina frågor på Discord.
+            Jag är mycket nöjd med kursen och skulle gärna rekommendera den till vänner. Jag ger kursen 10 av 10 i betyg.
+                        </p>
+    </div>
   
     
 </div>

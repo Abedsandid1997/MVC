@@ -27,6 +27,12 @@ class BlackJack extends AbstractController
         return $this->render('projekt/game.html.twig');
     }
 
+    #[Route("/proj/redovisning", name: "proj-redovisning")]
+    public function redovisning(): Response
+    {
+        return $this->render('projekt/redovisning.html.twig');
+    }
+
     #[Route("/proj/game/share", name: "game_share")]
     public function share(SessionInterface $session): Response
     {
