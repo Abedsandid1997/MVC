@@ -244,20 +244,10 @@ class BlackJack extends AbstractController
 
 
 
+        $game = $session->get("game");
 
         $deck = $session->get("deck");
-        $antalKort = $deck->count();
-        if ($antalKort <= 7) {
-            $deck = new DeckOfCards();
-            $deck->shuffle();
-            $session->set("deck", $deck);
-
-        }
-        $game = $session->get("game");
         $game->changeNumHands($cardCount);
-        $game->changeIntelligenceLevel($intelligence);
-
-        $game->shareCards($deck);
 
         $player = $game->getPlayer();
         $bet = $player->bet($betAmount);
@@ -269,6 +259,18 @@ class BlackJack extends AbstractController
             return $this->redirectToRoute('game_share');
 
         }
+        $antalKort = $deck->count();
+        if ($antalKort <= 7) {
+            $deck = new DeckOfCards();
+            $deck->shuffle();
+            $session->set("deck", $deck);
+
+        }
+        $game->changeIntelligenceLevel($intelligence);
+
+        $game->shareCards($deck);
+
+
         return $this->redirectToRoute('table');
 
     }
