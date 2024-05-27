@@ -1,0 +1,50 @@
+{% extends "base3.html.twig" %}
+
+{% block title %}Api projekt{% endblock %}
+
+{% block body %}
+
+<h1>Api</h1>
+<form id="drawForm" method="post" action="">
+
+           <p>
+            <input type="submit" name="restart" value="New game"
+    onClick="this.form.action='{{ path('api_game_new') }}';this.form.method='post';">
+     
+        </p>
+        <p>
+            <input type="submit" name="restart" value="Shuffle"
+    onClick="this.form.action='{{ path('shuffle-deck') }}';this.form.method='post';">
+     
+        </p>
+   
+
+        <p>
+            <input type="submit" name="restart" value="Player darw card"
+    onClick="this.form.action='{{ path('game_player_draw') }}';this.form.method='post';">
+     
+        </p>
+
+        <p>
+            <input type="submit" name="restart" value="Bank darw card"
+    onClick="this.form.action='{{ path('game_bank_draw') }}';this.form.method='get';">
+     
+        </p>
+        <p>
+            <input type="submit" name="restart" value="Winner"
+    onClick="this.form.action='{{ path('game_winner') }}';this.form.method='get';">
+     
+        </p>
+        <p>
+            <input type="submit" name="restart" value="Game status"
+    onClick="this.form.action='{{ path('game-status') }}';this.form.method='get';">
+     
+        </p>
+    </form>
+
+
+
+{% endblock %}
+
+
+

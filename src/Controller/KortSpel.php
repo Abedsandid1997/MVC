@@ -36,15 +36,15 @@ class KortSpel extends AbstractController
     #[Route("/game/bank/draw", name: "game-bank-draw", methods: ['GET'])]
     public function init(SessionInterface $session): Response
     {
-        if (!$session->has('deck')) {
+        if (!$session->has('21deck')) {
             $deck = new DeckOfCards();
             $game = new Game();
 
-            $session->set("deck", $deck);
-            $session->set("game", $game);
+            $session->set("21deck", $deck);
+            $session->set("21game", $game);
         }
-        $deck = $session->get("deck");
-        $game = $session->get("game");
+        $deck = $session->get("21deck");
+        $game = $session->get("21game");
 
 
 
@@ -100,19 +100,19 @@ class KortSpel extends AbstractController
     public function init2(SessionInterface $session): Response
     {
 
-        if (!$session->has('deck')) {
+        if (!$session->has('21deck')) {
             $deck = new DeckOfCards();
             $game = new Game();
 
-            $session->set("deck", $deck);
-            $session->set("game", $game);
+            $session->set("21deck", $deck);
+            $session->set("21game", $game);
         }
-        $deck = $session->get("deck");
+        $deck = $session->get("21deck");
 
 
 
 
-        $game = $session->get("game");
+        $game = $session->get("21game");
 
         $player = $game->getPlayer();
 
@@ -147,15 +147,15 @@ class KortSpel extends AbstractController
     {
 
 
-        if (!$session->has('deck')) {
+        if (!$session->has('21deck')) {
             $deck = new DeckOfCards();
             $game = new Game();
 
-            $session->set("deck", $deck);
-            $session->set("game", $game);
+            $session->set("21deck", $deck);
+            $session->set("21game", $game);
         }
-        $deck = $session->get("deck");
-        $game = $session->get("game");
+        $deck = $session->get("21deck");
+        $game = $session->get("21game");
 
         $player = $game->getPlayer();
         $playerPoints = $player->getScore();

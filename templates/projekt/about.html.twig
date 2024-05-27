@@ -1,0 +1,38 @@
+{% extends "base3.html.twig" %}
+
+{% block title %}About{% endblock %}
+
+{% block body %}
+<div class="about">
+<h1>About</h1>
+       
+
+  
+        <section>
+            <h2>Introduction</h2>
+            <p>
+                Mitt projekt handlar om ett blackjackspel som jag har utvecklat. I detta spel kan du satsa, välja hur många händer du vill spela med, och välja svårighetsnivå för hur skicklig datorn ska vara. Svårighetsnivåerna är "easy", "medium", och "hard".
+                <br>
+                Du kan också splitta om du får två kort med samma värde.
+                <br>
+                Spelet inkluderar även ett räkningssystem som fungerar som ett hjälpmedel för spelaren. 
+                <br>
+                Det ger råd om du ska satsa högt eller lågt baserat på alla kort som har dragits tidigare och räknar ut true count genom att dela denna siffra med antalet kvarvarande kort.
+                <br>
+                Spelaren har två hjälpmedel till sitt förfogande:
+                <br>
+                1- Statistik visualiserad i en tabell som visar alla kort som har dragits och hur många gånger de har dykt upp.
+                <br>
+                2- En metod som beräknar sannolikheten för att spelaren blir tjock (går över 21) om ett nytt kort tas.
+                <br>
+                Lycka till med spelet!
+            </p>
+            <br>
+            <a href='{{ path('proj_new_game') }}' class="button button-yellow">Start game</a>
+        </section>
+
+</div>
+{% endblock %}
+
+
+

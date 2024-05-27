@@ -1,0 +1,16 @@
+{% extends "base3.html.twig" %}
+
+{% block title %}Blackjack{% endblock %}
+
+{% block body %}
+<img  width= "100px"src="{{ asset('img/blackjacklogo1.png') }}" alt="Card Image">
+<h1>Blackjack</h1>
+<h2>Få en hand så nära 21 som möjligt utan att överstiga 21.</h2>
+
+
+<a href='{{ path('proj_new_game') }}' class="button button-yellow">Start game</a>
+
+{% endblock %}
+
+
+

@@ -1,0 +1,82 @@
+{% extends "base3.html.twig" %}
+
+{% block title %}Bank draw{% endblock %}
+
+{% block body %}
+<h2 class="green">kort antal : {{antal}}</h2>
+<h2 class="green">bank points is: {{BankCards}}</h2>
+
+<div class= "table">
+
+    {% for card in bank %}
+
+        <div class="card slide-out">
+            <img width= "70px"src="{{ asset(card.getCard()) }}" alt="Card Image">
+        </div>
+    
+{% endfor %}
+   
+
+</div>
+
+
+{{ include('flash.html.twig') }}
+
+
+<div class= "me_table">
+{% for cards in hands %}
+
+<div class="hands">
+        <h2 class="result">{{result[loop.index0]}}</h2>
+
+    <div class="card">
+
+        {% for card in cards %}
+
+        
+            {% if loop.last %}
+                        <img class="slide-in" width="70px" src="{{ asset(card.getCard()) }}" alt="Card Image">
+                    {% else %}
+                        <img width="70px" src="{{ asset(card.getCard()) }}" alt="Card Image">
+                    {% endif %}
+
+        {% endfor %}
+    </div>
+    <div>
+        <h3>points:{{playerScore[loop.index0]}}</h3>
+        <h3>Hand:{{loop.index0 + 1}}</h3>
+    </div>
+    </div>
+
+    
+{% endfor %}
+   
+
+</div>
+<a href='{{ path('game_share') }}' class="button button-yellow">start new game</a>
+ <h3 class="tokens"><img  width= "60px"src="{{ asset('img/tokens.png') }}" alt="Card Image"> : {{player_balance}}$ </h3>
+
+
+
+<script>
+    // Wait for the DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Get all flash messages
+        const flashMessages = document.querySelectorAll('.flash-message');
+
+        // Loop through each message
+        flashMessages.forEach((message) => {
+            // Set a timeout to remove the message after 2 seconds
+            setTimeout(() => {
+                message.style.transition = 'opacity 1s';
+                message.style.opacity = '0';
+                setTimeout(() => {
+                    message.remove();
+                }, 1000); // Allow the fade-out transition to complete
+            }, 2000);
+        });
+    });
+</script>
+
+{% endblock %}
+

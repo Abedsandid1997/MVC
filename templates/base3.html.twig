@@ -14,19 +14,35 @@
         {% endblock %}
     </head>
     <body>
-        <header class="site-header" style="background-image: url({{ asset('img/background.jpg') }})">
-        <span class="site-title">My Symfony Site</span>
+        <header class="blackjack-header" style="background-image: url({{ asset('img/blackjackgreen.jpg') }})">
+        <img  width= "80px" height="80px" src="{{ asset('img/blackjacklogo2.png') }}" alt="Card Image">
         <nav class='nav'>
         <ul>
-            <li><a href="{{ path('game') }}">game</a></li>
+
+            
+            <li>
+            
+             <a href="{{ path('proj') }}">Game</a>
+
+            </li>
+            <li>
+            
+             <a href="{{ path('about') }}">About</a>
+
+            </li>
+            
+             
 
         </ul>
+
     </nav>
+        <img  width= "80px" height="80px" src="{{ asset('img/blackjacklogo1.png') }}" alt="Card Image">
+
     </header>
-    <main class="main game">
+    <main class="main game" style="background-image: url({{asset('img/blackjack3.jpg')}})">
             {% block body %}{% endblock %}
     </main>
-     <footer class="footer" style="background-image: url({{ asset('img/background.jpg') }})">
+     <footer class="footer" style="background-image: url({{ asset('img/blackjackgreen.jpg') }})">
         <div class="row">
         <div class="col3 box">
         <h4>Validering </h4>

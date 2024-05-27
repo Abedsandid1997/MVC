@@ -12,15 +12,29 @@ body {
     min-height: 100vh;
     align-items: center;
 }
+.blackjack-header .nav{
+    background-color: #256a2a;
+    border-radius: 60px;
+    border: 2px solid red;
+}
 
 header{
     height: 100px;
     width: 100%;
 }
 
+.blackjack-header{
+    height: 100px;
+    width: 100%;
+    background-size: contain;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .nav ul {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     padding: 1em 0;
     list-style: none;
 }
@@ -28,7 +42,16 @@ header{
 .nav ul li {
     padding: 0 1em;
 }
+.nav li {
+    font-size: 1.5rem;
+}
+.red{
+    color: red;
+}
 
+.green{
+    color: green;
+}
 .nav a, .nav-toggle {
     color: black;
     text-decoration: none;
@@ -214,6 +237,7 @@ h1{
     background-color: #83f2a9;
     border-color: #b8daff;
     margin: auto;
+    border-radius: 50px;
 
 }
 .flash-notice:before {
@@ -226,6 +250,8 @@ h1{
     background-color: rgb(74, 5, 5);
     border-color: #ffeeba;
     margin: auto;
+    border-radius: 50px;
+
 }
 .flash-warning:before {
     content: "⚠";
@@ -242,7 +268,6 @@ input[type=number], select {
   }
   
   input[type=submit] {
-    width: 100%;
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
@@ -266,16 +291,19 @@ input[type=number], select {
     display: flex;
     gap:5px;
     margin-top: auto;
+    justify-content: space-around;
+    width: 100%;
 }
 .game{
-    background-color: darkgreen;
-    width: 60%;
+    width: 70%;
     min-height: 600px;
-    gap: 10px;
+    gap: 10px; 
     margin: auto;
-    border-radius: 100px;
+    border-radius: 500px;
     border: 2px solid red;
     padding: 1rem;
+    background-size: cover;
+
 }
 .button-yellow{
     background-color: #ffcc00;
@@ -298,16 +326,7 @@ input[type=number], select {
     box-sizing: border-box;
   }
   
-  input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+ 
   
   input[type=submit]:hover {
     background-color: #45a049;
@@ -341,3 +360,129 @@ input[type=number], select {
     background-color: #04AA6D;
     color: white;
   }
+  @keyframes moveFromRight {
+    from { transform: translateX(100%); }
+}
+
+@keyframes moveToRight {
+    to { transform: translateX(100%); }
+}
+
+.slide-in {
+    animation: moveFromRight 0.4s ease both;
+}
+
+.slide-out {
+    animation: moveToRight 0.4s ease both;
+}
+
+.hands-num{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.selected {
+    border: 2px solid red; /* Visual cue for selected cards */
+}
+
+.hand-num {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.hand-num:hover {
+    transform: scale(1.1);
+}
+.bet-amount{
+    width: 12rem;
+}
+.intelligence-option {
+    cursor: pointer;
+    transition: transform .3s;
+    border: 2px solid red;
+    border-radius: 50px;
+    padding: 1rem;
+    margin-top: 0.5em;
+}
+.intelligence-option:hover {
+    transform: scale(1.1);
+    color:white;
+}
+
+.intelligence-options{
+    left: 5rem;
+    position: fixed;
+    top: 10rem;
+    padding: 1.5rem;
+    border-radius: 10rem;
+    color: green;
+    font-size: 1.4rem;
+}
+.intelligence-options .selected{
+    color:white;
+    border: 2px solid green;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    color:blue;
+}
+
+/* Table headers styling */
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+/* Header background and text color */
+th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Row striping */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect on table rows */
+tr:hover {
+    background-color: #f1f1f1;
+}
+.Statistics{
+    position:fixed;
+    color: red;
+    right: 3rem;
+    top: 5rem;
+
+}
+
+
+
+.tokens{
+    position:fixed;
+    bottom: 8rem;
+    left: 15rem;
+    font-size: 2rem;
+    color: red;
+}
+
+.about{
+    margin: auto;
+    background-color: green;
+    padding: 3rem;
+    border-radius: 112px;
+}
+
+.result{
+    background-color: #256a2a;
+    bottom: 16.5rem;
+    color: red;
+    position: fixed;
+    padding: 4px;
+    border: 2px solid black;
+    border-radius: 13px;
+}

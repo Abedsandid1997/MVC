@@ -1,0 +1,77 @@
+{% extends "base3.html.twig" %}
+
+{% block title %}Start{% endblock %}
+
+{% block body %}
+
+<h2>banken</h2>
+
+        <div class="card slide-in">
+            <img width= "70px"src="{{ asset('img/kort.png') }}" alt="Card Image">
+        </div>
+    
+   
+
+</div>
+{{ include('flash.html.twig') }}
+
+    <div class="me_table">
+
+<form id="hands-num" class="hands-num" action="{{ path('game-player-start') }}" method="POST">
+    <input type="hidden" id="hand-amount" name="hands-num" value="1">
+        <img class="hand-num" width="70px" src="{{ asset('img/kort.png') }}" alt="Card Image" data-value="1">
+        <img class="hand-num" width="70px" src="{{ asset('img/kort.png') }}" alt="Card Image" data-value="1">
+        <img class="hand-num" width="70px" src="{{ asset('img/kort.png') }}" alt="Card Image" data-value="1">
+   
+    </div>
+
+ <button type="submit" class="button button-yellow">share cards</button>
+  <h3 class="tokens"><img  width= "60px"src="{{ asset('img/tokens.png') }}" alt="Card Image"> : {{player_balance}}$ </h3>
+
+ <h3> Bet advice: {{betAdvice}}  </h3>
+ 
+  {% if player_balance == 0 %}
+<a href='{{ path('new_game') }}' class="button button-yellow">Recharg tokens</a>
+{% endif %}
+<select id="bet-amount" class="bet-amount" name="bet-amount">
+        <option value="10">10$</option>
+        <option value="20">20$</option>
+        <option value="50">50$</option>
+        <option value="100">100$</option>
+    </select>
+    <input type="hidden" id="intelligence-value" name="intelligence" value="easy">
+    <div class="intelligence-options">
+        <div class="intelligence-option" data-value="easy">Easy</div>
+        <div class="intelligence-option" data-value="basic">Medium</div>
+        <div class="intelligence-option" data-value="advanced">Hard</div>
+    </div>
+</form>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const cards = document.querySelectorAll('.hand-num');
+        const handsNum = document.getElementById('hand-amount');
+        let totalHands = 0;
+
+        const intelligenceOptions = document.querySelectorAll('.intelligence-option');
+        const intelligenceValue = document.getElementById('intelligence-value');
+        intelligenceOptions.forEach(option => {
+            option.addEventListener('click', (event) => {
+                const selectedValue = event.target.getAttribute('data-value');
+                intelligenceValue.value = selectedValue;
+                intelligenceOptions.forEach(opt => opt.classList.remove('selected'));
+                event.target.classList.add('selected');
+            });
+        });
+        cards.forEach(card => {
+            card.addEventListener('click', (event) => {
+                totalHands += parseInt(card.getAttribute('data-value'));
+                handsNum.value = totalHands;
+                card.classList.add('selected'); // Optional: Add a visual cue for selected cards
+            });
+        });
+    });
+</script>
+{% endblock %}
+
+
+

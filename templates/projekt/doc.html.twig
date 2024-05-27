@@ -1,0 +1,114 @@
+{% extends "base3.html.twig" %}
+
+{% block title %}draw 1 card{% endblock %}
+
+{% block body %}
+<h1>Docmention</h1>
+
+<div>
+<h2>Flowchart:</h2>
+    <img width="600px" src="{{ asset('img/flowchart.png') }}" alt="">
+</div>
+<div>
+<h2>Klasser</h2>
+<p><strong>Bank:</strong> 
+    <br>
+    Ansvarar för att hantera bankens hand, beräkna bankens poäng och fatta beslut om bankens drag.
+    </p>
+<p><strong>Game:</strong>
+    <br>
+    Hanterar spelets logik, inklusive att skapa spelobjekt (spelare och bank), avgöra vinnaren och styra spelets flöde. </p>
+<p><strong>Player:</strong> 
+    <br>
+    Representerar spelaren och hanterar spelarens hand, beräkna spelarens poäng och fatta beslut om spelarens drag. </p>
+<p><strong>DeckOfCards:</strong> 
+    <br>
+    Skapar och hanterar kortleken, inklusive att skapa kortobjekt, blanda korten och dela ut kort till spelaren och banken. </p>
+</div>
+<div>
+<h2>psuedokod:</h2>
+    <h3>Klass Game:</h3>
+    <p>
+    - Privata variabler: spelare, bank
+    <br>
+    - Konstruktor():
+    <br>
+        - Skapa en ny spelare och en ny bank
+        <br>
+
+    - Funktion hämtaSpelare():
+    <br>
+        - Returnera spelaren
+        <br>
+
+    - Funktion hämtaBank():
+    <br>
+        - Returnera banken
+        <br>
+
+    - Funktion bestämVinnare():
+    <br>
+        - Beräkna poäng för spelare och bank
+        <br>
+        - Jämför poängen för att bestämma vinnaren
+        <br>
+    </p>
+    <h3>Klass Bank:</h3>
+    <p>
+    - Privat variabel: hand
+    <br>
+
+    - Konstruktor():
+    <br>
+        - Skapa en tom hand
+        <br>
+
+    - Funktion läggTillKort(kort):
+    <br>
+        - Lägg till ett kort i bankens hand
+        <br>
+
+    - Funktion beräknaPoäng():
+    <br>
+        - Beräkna poängen för banken baserat på handen
+        <br>
+
+    - Funktion fortsättDragaKort():
+    <br>
+        - Avgör om banken ska dra fler kort baserat på dess poäng
+        <br>
+    </p>
+
+    <h3>Klass Spelare:</h3>
+    <p>
+    - Privat variabel: hand
+    <br>
+
+    - Konstruktor():
+    <br>
+        - Skapa en tom hand
+        <br>
+
+    - Funktion läggTillKort(lek):
+    <br>
+        - Dra ett kort från leken och lägg till det i handen
+        <br>
+
+    - Funktion beräknaPoäng():
+    <br>
+        - Beräkna poängen för spelaren baserat på handen
+        <br>
+
+    - Funktion ärBust():
+    <br>
+        - Kontrollera om spelaren är över 21 poäng
+        <br>
+    </p>
+    
+</div>
+
+
+{% endblock %}
+
+
+

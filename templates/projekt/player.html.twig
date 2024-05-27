@@ -1,0 +1,98 @@
+{% extends "base3.html.twig" %}
+
+{% block title %}Player draw{% endblock %}
+
+{% block body %}
+<div class="Statistics">
+
+    <table>
+            <tr>
+                <th colspan="2">Card Statistics</th>
+            </tr>
+            <tr>
+                <th>Card Value</th>
+                <th>Count</th>
+            </tr>
+            {% for cardValue, count in statistics %}
+                <tr>
+                    <td>{{ cardValue }}</td>
+                    <td>{{ count }}</td>
+                </tr>
+            {% endfor %}
+    </table>
+
+</div>
+
+<h2>kort antal : {{antal}}</h2>
+<h2>bank points is: {{bankscore}}</h2>
+
+{% for card in bankhand %}
+
+        <div class="card slide-in">
+            <img width= "70px"src="{{ asset(card.getCard()) }}" alt="Card Image">
+        </div>
+    
+{% endfor %}
+   
+
+
+{{ include('flash.html.twig') }}
+
+<div class= "me_table">
+{% for cards in hands %}
+<div class="hands">
+    <div class="card">
+
+        {% for card in cards %}
+
+        
+            <img class="slide-in" width= "70px"src="{{ asset(card.getCard()) }}" alt="Card Image">
+
+        {% endfor %}
+    </div>
+        <h3>points:{{value[loop.index0]}}</h3>
+        <h3>Hand:{{loop.index0 + 1}}</h3>
+    </div>
+
+    
+{% endfor %}
+   
+
+
+</div>
+<h2>Playing hand:{{currentHand + 1}} </h2>
+<h2>Probability Of Busting:{{ProbabilityOfBusting}}% </h2>
+
+<div>
+<a href='{{ path('player-draw') }}' class="button button-yellow">draw</a>
+<a href='{{ path('next_hand') }}' class="button button-yellow">stop</a>
+ {% if split_hands %}
+<a href='{{ path('split') }}' class="button button-yellow">split</a>
+{% endif %}
+</div>
+ <h3 class="tokens"><img  width= "60px"src="{{ asset('img/tokens.png') }}" alt="Card Image"> {{player_balance}}$  </h3>
+
+<script>
+    // Wait for the DOM to be fully loaded
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Get all flash messages
+        const flashMessages = document.querySelectorAll('.flash-message');
+
+        // Loop through each message
+        flashMessages.forEach((message) => {
+            // Set a timeout to remove the message after 2 seconds
+            setTimeout(() => {
+                message.style.transition = 'opacity 1s';
+                message.style.opacity = '0';
+                setTimeout(() => {
+                    message.remove();
+                }, 1000); // Allow the fade-out transition to complete
+            }, 2000);
+        });
+    });
+</script>
+
+{% endblock %}
+
+
+
